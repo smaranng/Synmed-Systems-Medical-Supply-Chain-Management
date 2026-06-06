@@ -1,0 +1,53 @@
+{
+  "name": "medical-supply-chain",
+  "version": "1.0.0",
+  "description": "Comprehensive medical supply chain management system",
+  "private": true,
+  "workspaces": [
+    "frontend/*",
+    "backend/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:customer\" \"npm run dev:pharmacy\" \"npm run dev:distributor\" \"npm run dev:admin\" \"npm run dev:gateway\"",
+    "dev:customer": "cd frontend/customer-portal && npm run dev",
+    "dev:pharmacy": "cd frontend/pharmacy-portal && npm run dev",
+    "dev:distributor": "cd frontend/distributor-portal && npm run dev",
+    "dev:admin": "cd frontend/admin-portal && npm run dev",
+    "dev:gateway": "cd backend/api-gateway && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "npm run build:customer && npm run build:pharmacy && npm run build:distributor && npm run build:admin",
+    "build:customer": "cd frontend/customer-portal && npm run build",
+    "build:pharmacy": "cd frontend/pharmacy-portal && npm run build",
+    "build:distributor": "cd frontend/distributor-portal && npm run build",
+    "build:admin": "cd frontend/admin-portal && npm run build",
+    "build:backend": "cd backend/api-gateway && npm run build",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "npm run test --workspaces --if-present",
+    "test:backend": "cd backend && npm run test --workspaces --if-present",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:build": "docker-compose build",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\""
+  },
+  "devDependencies": {
+    "@types/multer": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongodb": "^7.0.0",
+    "multer": "^2.0.2",
+    "ngrok": "^5.0.0-beta.2"
+  }
+}

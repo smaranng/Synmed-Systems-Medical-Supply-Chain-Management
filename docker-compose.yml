@@ -1,0 +1,201 @@
+version: '3.8'
+
+services:
+  # MongoDB Databases
+  mongodb:
+    image: mongo:7.0
+    container_name: medical-supply-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+    volumes:
+      - mongodb_data:/data/db
+      - ./backend/database/init:/docker-entrypoint-initdb.d
+    networks:
+      - medical-supply-network
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: medical-supply-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass redis123
+    volumes:
+      - redis_data:/data
+    networks:
+      - medical-supply-network
+
+  # RabbitMQ Message Queue
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: medical-supply-rabbitmq
+    restart: unless-stopped
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin123
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - medical-supply-network
+
+  # API Gateway
+  api-gateway:
+    build:
+      context: ./backend/api-gateway
+      dockerfile: Dockerfile
+    container_name: medical-supply-gateway
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=development
+      - MONGODB_URI=mongodb://admin:admin123@mongodb:27017
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=redis123
+      - RABBITMQ_URL=amqp://admin:admin123@rabbitmq:5672
+    depends_on:
+      - mongodb
+      - redis
+      - rabbitmq
+    networks:
+      - medical-supply-network
+
+  # User Service
+  user-service:
+    build:
+      context: ./backend/services/user-service
+      dockerfile: Dockerfile
+    container_name: medical-supply-user-service
+    restart: unless-stopped
+    ports:
+      - "4001:4001"
+    environment:
+      - NODE_ENV=development
+      - MONGODB_URI=mongodb://admin:admin123@mongodb:27017/user_db
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=redis123
+    depends_on:
+      - mongodb
+      - redis
+    networks:
+      - medical-supply-network
+
+  # Inventory Service
+  inventory-service:
+    build:
+      context: ./backend/services/inventory-service
+      dockerfile: Dockerfile
+    container_name: medical-supply-inventory-service
+    restart: unless-stopped
+    ports:
+      - "4002:4002"
+    environment:
+      - NODE_ENV=development
+      - MONGODB_URI=mongodb://admin:admin123@mongodb:27017/inventory_db
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=redis123
+    depends_on:
+      - mongodb
+      - redis
+    networks:
+      - medical-supply-network
+
+  # Order Service
+  order-service:
+    build:
+      context: ./backend/services/order-service
+      dockerfile: Dockerfile
+    container_name: medical-supply-order-service
+    restart: unless-stopped
+    ports:
+      - "4003:4003"
+    environment:
+      - NODE_ENV=development
+      - MONGODB_URI=mongodb://admin:admin123@mongodb:27017/order_db
+      - RABBITMQ_URL=amqp://admin:admin123@rabbitmq:5672
+    depends_on:
+      - mongodb
+      - rabbitmq
+    networks:
+      - medical-supply-network
+
+  # Customer Portal
+  customer-portal:
+    build:
+      context: ./frontend/customer-portal
+      dockerfile: Dockerfile
+    container_name: medical-supply-customer-portal
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://api-gateway:4000/graphql
+    depends_on:
+      - api-gateway
+    networks:
+      - medical-supply-network
+
+  # Pharmacy Portal
+  pharmacy-portal:
+    build:
+      context: ./frontend/pharmacy-portal
+      dockerfile: Dockerfile
+    container_name: medical-supply-pharmacy-portal
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    environment:
+      - VITE_API_URL=http://api-gateway:4000/graphql
+    depends_on:
+      - api-gateway
+    networks:
+      - medical-supply-network
+
+  # distributor Portal
+  distributor-portal:
+    build:
+      context: ./frontend/distributor-portal
+      dockerfile: Dockerfile
+    container_name: medical-supply-distributor-portal
+    restart: unless-stopped
+    ports:
+      - "3002:3002"
+    environment:
+      - VITE_API_URL=http://api-gateway:4000/graphql
+    depends_on:
+      - api-gateway
+    networks:
+      - medical-supply-network
+
+  # Admin Portal
+  admin-portal:
+    build:
+      context: ./frontend/admin-portal
+      dockerfile: Dockerfile
+    container_name: medical-supply-admin-portal
+    restart: unless-stopped
+    ports:
+      - "3003:3003"
+    environment:
+      - VITE_API_URL=http://api-gateway:4000/graphql
+    depends_on:
+      - api-gateway
+    networks:
+      - medical-supply-network
+
+volumes:
+  mongodb_data:
+  redis_data:
+  rabbitmq_data:
+
+networks:
+  medical-supply-network:
+    driver: bridge

@@ -1,0 +1,113 @@
+@startuml Medical Supply Chain System Architecture
+
+!define RECTANGLE class
+
+package "Frontend Layer" {
+    [Pharmacy Dashboard] as PharmacyUI
+    [distributor Dashboard] as distributorUI
+    [Admin Dashboard] as AdminUI
+    [Customer Website] as CustomerUI
+    [Mobile App] as MobileApp
+}
+
+package "API Gateway Layer" {
+    [GraphQL Gateway] as Gateway
+    [Authentication Service] as AuthService
+    [Rate Limiter] as RateLimit
+    [Load Balancer] as LoadBalancer
+}
+
+package "Microservices Layer" {
+    [User Management Service] as UserService
+    [Inventory Service] as InventoryService
+    [Order Management Service] as OrderService
+    [distributor Service] as distributorService
+    [Notification Service] as NotificationService
+    [Tracking Service] as TrackingService
+    [ICN Service] as ICNService
+    [Payment Service] as PaymentService
+}
+
+package "AI Services Layer" {
+    [Demand Forecasting AI] as ForecastAI
+    [Invoice Processing AI] as InvoiceAI
+    [Analytics Engine] as AnalyticsAI
+}
+
+package "External Services" {
+    [SMS Gateway] as SMS
+    [Email Service] as Email
+    [Maps API] as Maps
+    [Payment Gateway] as PaymentGW
+    [Geo Sensors] as GeoSensors
+}
+
+package "Data Layer" {
+    database "User DB" as UserDB
+    database "Inventory DB" as InventoryDB
+    database "Orders DB" as OrderDB
+    database "distributor DB" as distributorDB
+    database "Analytics DB" as AnalyticsDB
+    database "Tracking DB" as TrackingDB
+}
+
+package "Infrastructure" {
+    [Redis Cache] as Cache
+    [Message Queue] as Queue
+    [File Storage] as Storage
+    [Monitoring] as Monitor
+}
+
+' Frontend connections
+PharmacyUI --> Gateway
+distributorUI --> Gateway
+AdminUI --> Gateway
+CustomerUI --> Gateway
+MobileApp --> Gateway
+
+' Gateway connections
+Gateway --> AuthService
+Gateway --> RateLimit
+LoadBalancer --> Gateway
+
+' Service connections
+Gateway --> UserService
+Gateway --> InventoryService
+Gateway --> OrderService
+Gateway --> distributorService
+Gateway --> NotificationService
+Gateway --> TrackingService
+Gateway --> ICNService
+Gateway --> PaymentService
+
+' AI Service connections
+InventoryService --> ForecastAI
+distributorService --> InvoiceAI
+OrderService --> AnalyticsAI
+
+' External service connections
+NotificationService --> SMS
+NotificationService --> Email
+TrackingService --> Maps
+TrackingService --> GeoSensors
+PaymentService --> PaymentGW
+
+' Database connections
+UserService --> UserDB
+InventoryService --> InventoryDB
+OrderService --> OrderDB
+distributorService --> distributorDB
+TrackingService --> TrackingDB
+AnalyticsAI --> AnalyticsDB
+
+' Infrastructure connections
+UserService --> Cache
+InventoryService --> Cache
+OrderService --> Queue
+NotificationService --> Queue
+distributorService --> Storage
+Monitor --> UserService
+Monitor --> InventoryService
+Monitor --> OrderService
+
+@enduml

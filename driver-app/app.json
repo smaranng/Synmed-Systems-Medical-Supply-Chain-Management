@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Driver App",
+    "slug": "synmed-driver-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "newArchEnabled": false,
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#EA580C"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.yourcompany.synmeddriverapp",
+      "infoPlist": {
+        "UIBackgroundModes": ["location"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#EA580C"
+      },
+      "package": "com.yourcompany.synmeddriverapp"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-asset",
+        [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(BUNDLE_IDENTIFIER) to use your location for delivery tracking.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ]
+
+    ],
+    "owner": "shreyas2894",
+    "extra": {
+      "eas": {
+        "projectId": "f4c4588e-6a2c-4209-bf74-6b4a2dc4a400"
+      }
+    }
+  }
+}

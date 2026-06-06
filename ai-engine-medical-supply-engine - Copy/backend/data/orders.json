@@ -1,0 +1,50 @@
+[
+  {
+    "orderNumber": "ORD-20260410141830-FDAB8A97",
+    "pharmaID": "PHM-697aae8fe53b28115f0251e2",
+    "distributorID": "DST-69789061da40d7dc08aadd79",
+    "items": {
+      "0": {
+        "name": "Losar 50 Tablet",
+        "price": 29.0,
+        "quantity": 346,
+        "discountPercent": 5.0,
+        "gstRate": 12.0,
+        "hsnCode": "30049099",
+        "mrpPerPack": 33.35,
+        "taxBreakdown": {
+          "gross": 10034.0,
+          "discount": 501.7,
+          "taxable": 9532.3,
+          "gst": 1143.88,
+          "cgst": 571.94,
+          "sgst": 571.94
+        },
+        "productID_Dtb": "DST-69789061da40d7dc08aadd79-MED010",
+        "productID_Phm": "PHM-697aae8fe53b28115f0251e2-MED010"
+      },
+      "1": {
+        "name": "Taxim-O 200 Tablet",
+        "price": 5.56,
+        "quantity": 945,
+        "discountPercent": 5.0,
+        "gstRate": 12.0,
+        "hsnCode": "30049099",
+        "mrpPerPack": 6.34,
+        "taxBreakdown": {
+          "gross": 5254.2,
+          "discount": 262.71,
+          "taxable": 4991.49,
+          "gst": 598.98,
+          "cgst": 299.49,
+          "sgst": 299.49
+        },
+        "productID_Dtb": "DST-69789061da40d7dc08aadd79-MED016",
+        "productID_Phm": "PHM-697aae8fe53b28115f0251e2-MED016"
+      }
+    },
+    "totalAmount": 16266.65,
+    "fingerprint": "c2ab6913b0f99858828f272751952e039091bb19e713c5b4ce92d61c38c740c9",
+    "created_at": "2026-04-10T08:48:36.950154+00:00"
+  }
+]

@@ -1,0 +1,34 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    monitor: 'medical-supply-chain'
+
+scrape_configs:
+  - job_name: 'api-gateway'
+    static_configs:
+      - targets: ['api-gateway:4000']
+    
+  - job_name: 'user-service'
+    static_configs:
+      - targets: ['user-service:4001']
+    
+  - job_name: 'inventory-service'
+    static_configs:
+      - targets: ['inventory-service:4002']
+    
+  - job_name: 'order-service'
+    static_configs:
+      - targets: ['order-service:4003']
+    
+  - job_name: 'distributor-service'
+    static_configs:
+      - targets: ['distributor-service:4004']
+    
+  - job_name: 'mongodb'
+    static_configs:
+      - targets: ['mongodb:27017']
+    
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['redis:6379']

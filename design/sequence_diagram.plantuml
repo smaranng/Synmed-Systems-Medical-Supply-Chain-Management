@@ -1,0 +1,249 @@
+@startuml Medical Supply Chain Sequence Diagram
+
+title Medical Supply Chain - Key Operations Flow
+
+actor Customer
+actor Pharmacy
+actor distributor
+actor Admin
+participant "Customer UI" as CUI
+participant "Pharmacy UI" as PUI
+participant "distributor UI" as VUI
+participant "Admin UI" as AUI
+participant "GraphQL Gateway" as Gateway
+participant "Auth Service" as Auth
+participant "User Service" as UserSvc
+participant "Inventory Service" as InventorySvc
+participant "Order Service" as OrderSvc
+participant "distributor Service" as distributorSvc
+participant "Notification Service" as NotificationSvc
+participant "Tracking Service" as TrackingSvc
+participant "AI Service" as AISvc
+participant "Payment Service" as PaymentSvc
+database "MongoDB" as DB
+queue "Message Queue" as Queue
+
+== Customer Medicine Search & Order ==
+
+Customer -> CUI: Search for medicine
+CUI -> Gateway: POST /graphql
+    note right
+        Input: {
+            "query": "searchMedicines",
+            "variables": {
+                "keyword": "Paracetamol",
+                "location": "lat,lng",
+                "radius": 5000
+            }
+        }
+    end note
+
+Gateway -> Auth: Validate token
+Auth --> Gateway: Token valid
+Gateway -> InventorySvc: searchMedicines(query)
+InventorySvc -> DB: Query medicines with stock
+DB --> InventorySvc: Medicine results
+InventorySvc --> Gateway: Medicine list with availability
+Gateway --> CUI: Search results
+    note right
+        Output: {
+            "medicines": [{
+                "id": "med_123",
+                "name": "Paracetamol 500mg",
+                "price": 25.50,
+                "availablePharmacies": [{
+                    "pharmacyId": "pharm_456",
+                    "name": "City Pharmacy",
+                    "distance": 1.2,
+                    "stock": 50
+                }]
+            }]
+        }
+    end note
+
+Customer -> CUI: Place order
+CUI -> Gateway: POST /graphql (createOrder)
+    note right
+        Input: {
+            "mutation": "createOrder",
+            "variables": {
+                "customerId": "cust_789",
+                "pharmacyId": "pharm_456",
+                "items": [{
+                    "medicineId": "med_123",
+                    "quantity": 2
+                }]
+            }
+        }
+    end note
+
+Gateway -> OrderSvc: createOrder(orderData)
+OrderSvc -> InventorySvc: reserveStock(medicineId, quantity)
+InventorySvc -> DB: Update stock reservation
+OrderSvc -> PaymentSvc: processPayment(orderData)
+PaymentSvc --> OrderSvc: Payment confirmed
+OrderSvc -> DB: Save order
+OrderSvc -> Queue: Publish order_created event
+Queue -> NotificationSvc: Process notification
+NotificationSvc -> Pharmacy: Send order notification
+OrderSvc --> Gateway: Order created
+Gateway --> CUI: Order confirmation
+    note right
+        Output: {
+            "order": {
+                "id": "ord_101",
+                "orderNumber": "ORD-2024-001",
+                "status": "CONFIRMED",
+                "totalAmount": 51.00,
+                "estimatedPickup": "2024-01-15T14:00:00Z"
+            }
+        }
+    end note
+
+== Pharmacy Auto-Reorder Process ==
+
+AISvc -> InventorySvc: Analyze stock levels (scheduled)
+InventorySvc -> DB: Get stock data
+DB --> InventorySvc: Stock information
+InventorySvc --> AISvc: Stock data
+AISvc -> AISvc: Generate demand forecast
+    note right
+        AI Processing:
+        - Historical sales analysis
+        - Seasonal patterns
+        - Current stock levels
+        - Lead times
+    end note
+
+AISvc -> OrderSvc: Create auto-reorder recommendation
+OrderSvc -> PUI: Display reorder suggestions
+Pharmacy -> PUI: Approve auto-reorder
+PUI -> Gateway: POST /graphql (createReorder)
+    note right
+        Input: {
+            "mutation": "createReorder",
+            "variables": {
+                "pharmacyId": "pharm_456",
+                "recommendations": [{
+                    "medicineId": "med_123",
+                    "suggestedQuantity": 100,
+                    "preferreddistributor": "vend_789"
+                }]
+            }
+        }
+    end note
+
+Gateway -> OrderSvc: createReorder(reorderData)
+OrderSvc -> distributorSvc: findBestdistributor(medicineId, quantity)
+distributorSvc -> DB: Query distributor catalog
+distributorSvc --> OrderSvc: distributor recommendation
+OrderSvc -> DB: Create procurement order
+OrderSvc -> Queue: Publish reorder_created event
+Queue -> NotificationSvc: Process distributor notification
+NotificationSvc -> distributor: Send order notification
+OrderSvc --> Gateway: Reorder created
+Gateway --> PUI: Reorder confirmation
+
+== distributor Invoice Processing ==
+
+distributor -> VUI: Upload invoice document
+VUI -> Gateway: POST /graphql (uploadInvoice)
+    note right
+        Input: {
+            "mutation": "uploadInvoice",
+            "variables": {
+                "distributorId": "vend_789",
+                "invoiceFile": "base64_encoded_file",
+                "orderId": "ord_102"
+            }
+        }
+    end note
+
+Gateway -> distributorSvc: processInvoice(invoiceData)
+distributorSvc -> AISvc: extractInvoiceData(file)
+AISvc -> AISvc: AI invoice processing
+    note right
+        AI Processing:
+        - OCR text extraction
+        - Data field identification
+        - Validation against order
+        - Confidence scoring
+    end note
+
+AISvc --> distributorSvc: Extracted invoice data
+    note right
+        Output: {
+            "invoiceNumber": "INV-2024-001",
+            "items": [{
+                "medicineId": "med_123",
+                "quantity": 100,
+                "unitPrice": 20.00,
+                "batchNumber": "BATCH-001",
+                "expiryDate": "2025-12-31"
+            }],
+            "confidence": 0.95
+        }
+    end note
+
+distributorSvc -> InventorySvc: updatedistributorStock(stockData)
+InventorySvc -> DB: Update inventory
+distributorSvc -> OrderSvc: updateOrderStatus(orderId, "PROCESSING")
+OrderSvc -> TrackingSvc: createShipment(orderData)
+TrackingSvc -> DB: Create shipment record
+distributorSvc --> Gateway: Invoice processed
+Gateway --> VUI: Processing confirmation
+
+== Real-time Tracking Update ==
+
+TrackingSvc -> TrackingSvc: Receive GPS update (webhook)
+    note right
+        Input: {
+            "shipmentId": "ship_456",
+            "location": {
+                "latitude": 40.7128,
+                "longitude": -74.0060,
+                "timestamp": "2024-01-15T10:30:00Z"
+            },
+            "status": "IN_TRANSIT"
+        }
+    end note
+
+TrackingSvc -> DB: Update shipment location
+TrackingSvc -> Queue: Publish location_update event
+Queue -> NotificationSvc: Process tracking notification
+NotificationSvc -> Customer: Send SMS/email update
+NotificationSvc -> Pharmacy: Send dashboard update
+NotificationSvc -> Admin: Update tracking dashboard
+
+== Admin Error Handling ==
+
+Admin -> AUI: View error dashboard
+AUI -> Gateway: GET /graphql (getSystemErrors)
+Gateway -> OrderSvc: getFailedOrders()
+Gateway -> TrackingSvc: getDelayedShipments()
+Gateway -> InventorySvc: getStockDiscrepancies()
+OrderSvc -> DB: Query failed orders
+TrackingSvc -> DB: Query delayed shipments
+InventorySvc -> DB: Query stock issues
+Gateway --> AUI: Error summary
+    note right
+        Output: {
+            "errors": {
+                "failedOrders": 3,
+                "delayedShipments": 5,
+                "stockDiscrepancies": 2,
+                "systemAlerts": 1
+            },
+            "details": [...]
+        }
+    end note
+
+Admin -> AUI: Resolve stock discrepancy
+AUI -> Gateway: POST /graphql (resolveStockIssue)
+Gateway -> InventorySvc: adjustStock(adjustmentData)
+InventorySvc -> DB: Update stock levels
+InventorySvc -> Queue: Publish stock_adjusted event
+Queue -> NotificationSvc: Notify affected parties
+Gateway --> AUI: Issue resolved
+
+@enduml

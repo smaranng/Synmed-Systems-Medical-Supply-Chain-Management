@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-navy: #0A1D37;
+  --color-light-blue: #4BA3C3;
+  --color-green: #3BB273;
+
+  /* Secondary Colors */
+  --color-white: #F9FAFB;
+  --color-grey: #6B7280;
+  --color-red: #E63946;
+
+  /* Additional */
+  --color-border: #E5E7EB;
+  --color-input: #F3F4F6;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#F9FAFB] text-[#0A1D37] font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-[#0A1D37] font-semibold;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  a {
+    @apply text-[#4BA3C3] hover:underline transition-colors;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#3BB273] text-white px-4 py-2 rounded-md hover:bg-[#3BB273]/90 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-[#4BA3C3] text-white px-4 py-2 rounded-md hover:bg-[#4BA3C3]/90 transition-colors;
+  }
+
+  .btn-outline {
+    @apply border border-gray-300 text-[#0A1D37] px-4 py-2 rounded-md hover:bg-gray-50 transition-colors;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#4BA3C3] focus:border-transparent;
+  }
+
+  .nav-link {
+    @apply text-white hover:text-[#4BA3C3] transition-colors px-3 py-2;
+  }
+
+  .sidebar-link {
+    @apply flex items-center px-4 py-3 text-[#6B7280] hover:bg-[#F9FAFB] hover:text-[#0A1D37] rounded-md transition-colors;
+  }
+
+  .sidebar-link-active {
+    @apply bg-[#4BA3C3]/10 text-[#4BA3C3] font-medium;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Pulse animation for notifications */
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Fade in up for headings */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Slide up for cards */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease forwards;
+}
+
+/* Hide horizontal scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-in-out forwards;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.5);
+    opacity: 0
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1
+  }
+}
+
+.animate-scale {
+  animation: scale 0.4s cubic-bezier(.175, .885, .32, 1.275) forwards;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.4s ease-out forwards;
+}

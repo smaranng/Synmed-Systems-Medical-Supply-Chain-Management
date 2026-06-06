@@ -1,0 +1,140 @@
+{
+  "pharmacy_id": "PHARM-001",
+  "reorder_requests": [
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED006",
+      "medicine_name": "Metformin 500 mg tablet",
+      "current_stock": 150.0,
+      "required_stock": 470.08,
+      "order_quantity": 321,
+      "trigger_reason": "Current stock 150.0 is below the reorder point of 176.12."
+    },
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED008",
+      "medicine_name": "Atorvastatin 10 mg",
+      "current_stock": 260.0,
+      "required_stock": 740.29,
+      "order_quantity": 481,
+      "trigger_reason": "Current stock 260.0 is below the reorder point of 266.27."
+    },
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED014",
+      "medicine_name": "Montek-10",
+      "current_stock": 310.0,
+      "required_stock": 906.89,
+      "order_quantity": 597,
+      "trigger_reason": "Current stock 310.0 is below the reorder point of 322.51."
+    },
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED019",
+      "medicine_name": "Iron Folic Acid",
+      "current_stock": 120.0,
+      "required_stock": 363.01,
+      "order_quantity": 244,
+      "trigger_reason": "Current stock 120.0 is below the reorder point of 139.5."
+    },
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED021",
+      "medicine_name": "Clopidogrel 75 mg",
+      "current_stock": 390.0,
+      "required_stock": 1124.89,
+      "order_quantity": 735,
+      "trigger_reason": "Current stock 390.0 is below the reorder point of 395.27."
+    },
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED025",
+      "medicine_name": "Telma 40 Tablet",
+      "current_stock": 330.0,
+      "required_stock": 943.64,
+      "order_quantity": 614,
+      "trigger_reason": "Current stock 330.0 is below the reorder point of 332.35."
+    },
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED035",
+      "medicine_name": "Ciprofloxacin 500 mg",
+      "current_stock": 365.0,
+      "required_stock": 1072.1,
+      "order_quantity": 708,
+      "trigger_reason": "Current stock 365.0 is below the reorder point of 373.54."
+    },
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED036",
+      "medicine_name": "Methylcobalamin 1500 mcg",
+      "current_stock": 190.0,
+      "required_stock": 550.17,
+      "order_quantity": 361,
+      "trigger_reason": "Current stock 190.0 is below the reorder point of 199.43."
+    },
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED037",
+      "medicine_name": "Prednisolone 10 mg",
+      "current_stock": 125.0,
+      "required_stock": 368.94,
+      "order_quantity": 244,
+      "trigger_reason": "Current stock 125.0 is below the reorder point of 129.66."
+    },
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED038",
+      "medicine_name": "Tramadol 50 mg",
+      "current_stock": 205.0,
+      "required_stock": 621.82,
+      "order_quantity": 417,
+      "trigger_reason": "Current stock 205.0 is below the reorder point of 227.08."
+    },
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED040",
+      "medicine_name": "Meropenem 1 g",
+      "current_stock": 470.0,
+      "required_stock": 1336.56,
+      "order_quantity": 867,
+      "trigger_reason": "Current stock 470.0 is below the reorder point of 470.11."
+    },
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED042",
+      "medicine_name": "Doxycycline 100 mg",
+      "current_stock": 260.0,
+      "required_stock": 784.57,
+      "order_quantity": 525,
+      "trigger_reason": "Current stock 260.0 is below the reorder point of 284.25."
+    },
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED046",
+      "medicine_name": "Clindamycin 300 mg",
+      "current_stock": 200.0,
+      "required_stock": 553.64,
+      "order_quantity": 354,
+      "trigger_reason": "Current stock 200.0 is below the reorder point of 202.32."
+    },
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED047",
+      "medicine_name": "Fluconazole 150 mg",
+      "current_stock": 225.0,
+      "required_stock": 661.13,
+      "order_quantity": 437,
+      "trigger_reason": "Current stock 225.0 is below the reorder point of 241.53."
+    },
+    {
+      "pharmacy_id": "PHARM-001",
+      "medicine_id": "MED050",
+      "medicine_name": "Levoquin 500mg Tablet",
+      "current_stock": 180.0,
+      "required_stock": 511.55,
+      "order_quantity": 332,
+      "trigger_reason": "Current stock 180.0 is below the reorder point of 186.9."
+    }
+  ]
+}

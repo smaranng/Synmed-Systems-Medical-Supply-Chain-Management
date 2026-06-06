@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes dashboard-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes agent-step-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes agent-thinking-cursor {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes synmedprocai-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes synmedprocai-float {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(8px, -10px, 0) scale(1.05);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+:root {
+  color-scheme: light;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+@layer base {
+  html {
+    @apply bg-cyan-50;
+  }
+
+  body {
+    @apply min-h-screen bg-cyan-50 text-slate-900 antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(14, 165, 168, 0.2), transparent 34%),
+      radial-gradient(circle at top right, rgba(52, 211, 153, 0.22), transparent 30%),
+      linear-gradient(145deg, #ecfeff 0%, #f0fdfa 45%, #ffffff 100%);
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer utilities {
+  .dashboard-fade-in {
+    animation: dashboard-fade-in 380ms ease-out both;
+  }
+
+  .dashboard-scrollbar {
+    scrollbar-color: rgba(148, 163, 184, 0.45) transparent;
+  }
+
+  .dashboard-scrollbar::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+
+  .dashboard-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.45);
+    border-radius: 9999px;
+  }
+
+  .dashboard-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .agent-step-enter {
+    animation: agent-step-enter 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .agent-thinking-cursor {
+    animation: agent-thinking-cursor 1s steps(2, end) infinite;
+  }
+}
+
+.synmed-theme .bg-slate-950,
+.synmed-theme .bg-slate-950\/60,
+.synmed-theme .bg-slate-950\/70,
+.synmed-theme .bg-slate-950\/95,
+.synmed-theme .bg-slate-900\/60,
+.synmed-theme .bg-slate-900\/70,
+.synmed-theme .bg-slate-900\/75,
+.synmed-theme .bg-slate-900\/80,
+.synmed-theme .bg-white\/5,
+.synmed-theme .bg-white\/10,
+.synmed-theme .bg-white\/\[0\.04\] {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.synmed-theme .border-white\/10,
+.synmed-theme .border-white\/15 {
+  border-color: rgba(14, 116, 144, 0.2) !important;
+}
+
+.synmed-theme .text-white,
+.synmed-theme .text-slate-50,
+.synmed-theme .text-slate-100 {
+  color: #0f172a !important;
+}
+
+.synmed-theme .text-slate-200 {
+  color: #1e293b !important;
+}
+
+.synmed-theme .text-slate-300 {
+  color: #334155 !important;
+}
+
+.synmed-theme .text-slate-400 {
+  color: #475569 !important;
+}
+
+.synmed-theme .text-slate-500 {
+  color: #64748b !important;
+}
+
+.synmed-theme .text-cyan-100,
+.synmed-theme .text-cyan-100\/80,
+.synmed-theme .text-brand-sand {
+  color: #0e7490 !important;
+}
+
+.synmed-theme .text-brand-coral,
+.synmed-theme .text-amber-100,
+.synmed-theme .text-rose-50 {
+  color: #b45309 !important;
+}
+
+.synmed-theme .hover\:bg-white\/10:hover,
+.synmed-theme .hover\:bg-white\/15:hover {
+  background-color: rgba(236, 254, 255, 0.9) !important;
+}
+
+.synmed-theme .synmed-banner,
+.synmed-theme .synmed-banner * {
+  color: #ffffff !important;
+}

@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "f4c4588e-6a2c-4209-bf74-6b4a2dc4a400"
+      }
+    },
+    "android": {
+      "package": "com.shreyas2894.synmeddriverapp"
+    }
+  }
+}

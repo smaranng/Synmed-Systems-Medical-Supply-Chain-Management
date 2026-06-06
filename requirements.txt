@@ -1,0 +1,83 @@
+App installation:
+
+npm install -g expo-cli
+npm install -g eas-cli
+npm install expo@^54.0.0
+npx expo install expo-secure-store
+
+-To Build the app:
+eas build -p android --profile preview
+Execution:
+
+npm start, npm run dev
+
+1. Frontend
+
+cd Medical-Supply-Chain-Management/frontend/pharmacy-portal
+cd Medical-Supply-Chain-Management/frontend/customer-portal
+cd Medical-Supply-Chain-Management/frontend/admin-portal
+cd Medical-Supply-Chain-Management/frontend/distributor-portal
+
+2. Backend
+
+cd Medical-Supply-Chain-Management/backend/services/user-service
+cd Medical-Supply-Chain-Management/backend/services/inventory-service
+cd Medical-Supply-Chain-Management/backend/services/order-service
+cd Medical-Supply-Chain-Management/backend/services/distributor-service
+cd Medical-Supply-Chain-Management/backend/services/distributor_order-service
+
+3. App
+
+cd Medical-Supply-Chain-Management/driver-app/backend
+# Run: npm start
+cd Medical-Supply-Chain-Management/driver-app/
+# Run: npm start
+
+4. Docker:
+
+docker exec -it redis-local redis-cli
+monitor
+
+5. AI Demand Forecasting:
+cd Medical-Supply-Chain-Management/'ai-engine-medical-supply-engine - Copy'/backend>uvicorn app.main:app --reload
+cd Medical-Supply-Chain-Management/'ai-engine-medical-supply-engine - Copy'/frontend>npm run dev
+
+
+Error:
+Orders & Actions
+4 pending updates
+
+Clear all
+ORD-1771861854295-8937
+
+Cancelled
+Order Cancelled
+
+1 item • ₹61.00
+
+23-02-2026, 21:20
+
+ORD-1771859484281-9605
+
+Cancelled
+Order Cancelled
+
+1 item, 8 sub-items • ₹75.00
+
+23-02-2026, 20:41
+
+ORD-1771855485419-6933
+
+Cancelled
+Order Cancelled
+
+4 sub-items • ₹7.00
+
+23-02-2026, 19:34
+
+ORD-1771855383557-7294
+
+Cancelled
+Order Cancelled
+
+4 sub-items • ₹7.00

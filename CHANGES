@@ -1,0 +1,5 @@
+1. Changed the Landing Page
+2. Created login routes page for all modules login
+3. Registration connected to backend
+4. Customer login connected to backend
+5. Corrected login and logout routes for customer

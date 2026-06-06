@@ -1,0 +1,286 @@
+@startuml Medical Supply Chain Class Diagram
+
+' User Management Classes
+interface IUserService {
+    +authenticate(email: string, password: string): AuthResult
+    +createUser(userData: UserCreateDto): User
+    +getUserById(id: string): User
+    +updateUserProfile(id: string, data: UserUpdateDto): User
+    +deleteUser(id: string): boolean
+    +getUsersByRole(role: UserRole): User[]
+}
+
+class User {
+    +id: string
+    +email: string
+    +password: string
+    +role: UserRole
+    +profile: UserProfile
+    +createdAt: Date
+    +updatedAt: Date
+    +isActive: boolean
+    +lastLogin: Date
+    +permissions: Permission[]
+}
+
+enum UserRole {
+    PHARMACY
+    distributor
+    ADMIN
+    CUSTOMER
+}
+
+class UserProfile {
+    +firstName: string
+    +lastName: string
+    +phone: string
+    +address: Address
+    +organizationName?: string
+    +licenseNumber?: string
+}
+
+' Inventory Management Classes
+interface IInventoryService {
+    +getMedicineById(id: string): Medicine
+    +searchMedicines(query: SearchQuery): Medicine[]
+    +updateStock(medicineId: string, quantity: number): StockUpdate
+    +checkLowStock(pharmacyId: string): Medicine[]
+    +createReorderRequest(request: ReorderRequest): Order
+    +getBatchInfo(batchId: string): BatchInfo
+}
+
+class Medicine {
+    +id: string
+    +name: string
+    +genericName: string
+    +manufacturer: string
+    +category: MedicineCategory
+    +dosage: string
+    +form: MedicineForm
+    +description: string
+    +price: number
+    +requiresPrescription: boolean
+    +activeIngredients: string[]
+}
+
+class Stock {
+    +id: string
+    +medicineId: string
+    +pharmacyId: string
+    +quantity: number
+    +reservedQuantity: number
+    +batchNumber: string
+    +expiryDate: Date
+    +costPrice: number
+    +sellingPrice: number
+    +reorderLevel: number
+    +maxStockLevel: number
+}
+
+class BatchInfo {
+    +batchNumber: string
+    +manufacturingDate: Date
+    +expiryDate: Date
+    +quantity: number
+    +costPrice: number
+    +distributorId: string
+    +qualityStatus: QualityStatus
+}
+
+' Order Management Classes
+interface IOrderService {
+    +createOrder(orderData: OrderCreateDto): Order
+    +getOrderById(id: string): Order
+    +updateOrderStatus(id: string, status: OrderStatus): Order
+    +getOrdersByPharmacy(pharmacyId: string): Order[]
+    +getOrdersBydistributor(distributorId: string): Order[]
+    +cancelOrder(id: string): boolean
+    +generateInvoice(orderId: string): Invoice
+}
+
+class Order {
+    +id: string
+    +orderNumber: string
+    +pharmacyId: string
+    +distributorId: string
+    +customerId?: string
+    +items: OrderItem[]
+    +totalAmount: number
+    +status: OrderStatus
+    +orderType: OrderType
+    +createdAt: Date
+    +expectedDelivery: Date
+    +actualDelivery?: Date
+    +trackingNumber?: string
+}
+
+class OrderItem {
+    +medicineId: string
+    +quantity: number
+    +unitPrice: number
+    +totalPrice: number
+    +batchNumber?: string
+    +expiryDate?: Date
+}
+
+enum OrderStatus {
+    PENDING
+    CONFIRMED
+    PROCESSING
+    SHIPPED
+    DELIVERED
+    CANCELLED
+}
+
+enum OrderType {
+    CUSTOMER_ORDER
+    PHARMACY_PROCUREMENT
+    ICN_EXCHANGE
+    AUTO_REORDER
+}
+
+' distributor Management Classes
+interface IdistributorService {
+    +getdistributorById(id: string): distributor
+    +updatedistributorCatalog(distributorId: string, catalog: Medicine[]): boolean
+    +processInvoice(invoice: InvoiceFile): InvoiceProcessResult
+    +getdistributorOrders(distributorId: string): Order[]
+    +updateDeliveryStatus(orderId: string, status: DeliveryStatus): boolean
+}
+
+class distributor {
+    +id: string
+    +companyName: string
+    +licenseNumber: string
+    +contactPerson: string
+    +email: string
+    +phone: string
+    +address: Address
+    +serviceAreas: string[]
+    +catalog: Medicine[]
+    +rating: number
+    +isVerified: boolean
+}
+
+' Notification Classes
+interface INotificationService {
+    +sendNotification(notification: NotificationDto): boolean
+    +sendBulkNotifications(notifications: NotificationDto[]): boolean
+    +getNotificationHistory(userId: string): Notification[]
+    +markAsRead(notificationId: string): boolean
+    +subscribeToTopic(userId: string, topic: string): boolean
+}
+
+class Notification {
+    +id: string
+    +userId: string
+    +title: string
+    +message: string
+    +type: NotificationType
+    +priority: Priority
+    +isRead: boolean
+    +createdAt: Date
+    +scheduledAt?: Date
+    +metadata: object
+}
+
+enum NotificationType {
+    ORDER_UPDATE
+    STOCK_ALERT
+    DELIVERY_UPDATE
+    SYSTEM_ALERT
+    PROMOTION
+}
+
+' Tracking Classes
+interface ITrackingService {
+    +createShipment(shipmentData: ShipmentCreateDto): Shipment
+    +updateLocation(shipmentId: string, location: GeoLocation): boolean
+    +getShipmentStatus(shipmentId: string): ShipmentStatus
+    +getDeliveryRoute(shipmentId: string): Route
+    +estimateDeliveryTime(from: Address, to: Address): number
+}
+
+class Shipment {
+    +id: string
+    +orderId: string
+    +trackingNumber: string
+    +currentLocation: GeoLocation
+    +route: Route
+    +status: ShipmentStatus
+    +estimatedDelivery: Date
+    +actualDelivery?: Date
+    +driverId?: string
+    +vehicleId?: string
+}
+
+class GeoLocation {
+    +latitude: number
+    +longitude: number
+    +timestamp: Date
+    +accuracy: number
+}
+
+' AI Service Classes
+interface IAIService {
+    +forecastDemand(pharmacyId: string, medicineId: string): DemandForecast
+    +processInvoice(invoiceFile: File): InvoiceData
+    +analyzeStockPatterns(pharmacyId: string): StockAnalysis
+    +optimizeReorderQuantity(medicineId: string, historicalData: SalesData[]): number
+}
+
+class DemandForecast {
+    +medicineId: string
+    +predictedDemand: number
+    +confidence: number
+    +timeframe: number
+    +factors: ForecastFactor[]
+}
+
+class InvoiceData {
+    +distributorId: string
+    +invoiceNumber: string
+    +items: InvoiceItem[]
+    +totalAmount: number
+    +invoiceDate: Date
+    +confidence: number
+}
+
+' Common Classes
+class Address {
+    +street: string
+    +city: string
+    +state: string
+    +zipCode: string
+    +country: string
+    +coordinates?: GeoLocation
+}
+
+class SearchQuery {
+    +keyword: string
+    +category?: string
+    +priceRange?: PriceRange
+    +location?: GeoLocation
+    +radius?: number
+    +sortBy?: string
+    +sortOrder?: string
+}
+
+' Relationships
+IUserService ..> User
+IInventoryService ..> Medicine
+IInventoryService ..> Stock
+IOrderService ..> Order
+IdistributorService ..> distributor
+INotificationService ..> Notification
+ITrackingService ..> Shipment
+IAIService ..> DemandForecast
+
+User ||--o{ Order : places
+distributor ||--o{ Order : fulfills
+Medicine ||--o{ Stock : has
+Order ||--o{ OrderItem : contains
+Shipment ||--|| Order : tracks
+User ||--o{ Notification : receives
+
+@enduml

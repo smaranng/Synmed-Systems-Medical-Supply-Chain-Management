@@ -1,0 +1,154 @@
+@startuml Medical Supply Chain UI Navigation Flow
+
+!define state(x) state x
+
+' Customer Website Navigation
+state "Customer Portal" as CustomerPortal {
+    state "Landing Page" as CustomerHome
+    state "Medicine Search" as Search
+    state "Search Results" as SearchResults
+    state "Medicine Details" as MedicineDetails
+    state "Cart" as Cart
+    state "Checkout" as Checkout
+    state "Order Confirmation" as OrderConfirm
+    state "Order Tracking" as CustomerTracking
+    state "Profile" as CustomerProfile
+    
+    [*] --> CustomerHome
+    CustomerHome --> Search : search medicines
+    CustomerHome --> CustomerProfile : view profile
+    CustomerHome --> CustomerTracking : track orders
+    
+    Search --> SearchResults : submit search
+    SearchResults --> MedicineDetails : select medicine
+    SearchResults --> Search : refine search
+    
+    MedicineDetails --> Cart : add to cart
+    MedicineDetails --> SearchResults : back to results
+    
+    Cart --> Checkout : proceed to checkout
+    Cart --> Search : continue shopping
+    
+    Checkout --> OrderConfirm : place order
+    Checkout --> Cart : modify cart
+    
+    OrderConfirm --> CustomerTracking : track order
+    OrderConfirm --> CustomerHome : back to home
+    
+    CustomerTracking --> CustomerHome : back to home
+    CustomerProfile --> CustomerHome : back to home
+}
+
+' Pharmacy Portal Navigation
+state "Pharmacy Portal" as PharmacyPortal {
+    state "Pharmacy Dashboard" as PharmacyDash
+    state "Statistics" as PharmacyStats
+    state "Inventory Management" as Inventory
+    state "Medicine Details" as InventoryDetails
+    state "Procurement" as Procurement
+    state "Auto-Reorder" as AutoReorder
+    state "ICN Exchange" as ICN
+    state "Orders" as PharmacyOrders
+    state "Settings" as PharmacySettings
+    
+    [*] --> PharmacyDash
+    PharmacyDash --> PharmacyStats : view statistics
+    PharmacyDash --> Inventory : manage inventory
+    PharmacyDash --> Procurement : procurement
+    PharmacyDash --> ICN : ICN exchange
+    PharmacyDash --> PharmacyOrders : view orders
+    
+    Inventory --> InventoryDetails : select medicine
+    Inventory --> Procurement : reorder stock
+    InventoryDetails --> Inventory : back to inventory
+    
+    Procurement --> AutoReorder : auto-reorder setup
+    AutoReorder --> Procurement : back to procurement
+    
+    ICN --> PharmacyDash : back to dashboard
+    PharmacyOrders --> PharmacyDash : back to dashboard
+    PharmacyStats --> PharmacyDash : back to dashboard
+    PharmacySettings --> PharmacyDash : back to dashboard
+}
+
+' distributor Portal Navigation
+state "distributor Portal" as distributorPortal {
+    state "distributor Dashboard" as distributorDash
+    state "Order Management" as distributorOrders
+    state "Order Details" as distributorOrderDetails
+    state "Inventory Update" as distributorInventory
+    state "Invoice Upload" as InvoiceUpload
+    state "Shipping" as Shipping
+    state "Analytics" as distributorAnalytics
+    state "Settings" as distributorSettings
+    
+    [*] --> distributorDash
+    distributorDash --> distributorOrders : manage orders
+    distributorDash --> distributorInventory : update inventory
+    distributorDash --> InvoiceUpload : upload invoices
+    distributorDash --> distributorAnalytics : view analytics
+    
+    distributorOrders --> distributorOrderDetails : select order
+    distributorOrderDetails --> Shipping : process shipment
+    distributorOrderDetails --> distributorOrders : back to orders
+    
+    Shipping --> distributorOrderDetails : back to order
+    distributorInventory --> distributorDash : back to dashboard
+    InvoiceUpload --> distributorDash : back to dashboard
+    distributorAnalytics --> distributorDash : back to dashboard
+    distributorSettings --> distributorDash : back to dashboard
+}
+
+' Admin Portal Navigation
+state "Admin Portal" as AdminPortal {
+    state "Admin Dashboard" as AdminDash
+    state "Order Tracking" as AdminTracking
+    state "System Monitoring" as Monitoring
+    state "Error Handling" as ErrorHandling
+    state "User Management" as UserMgmt
+    state "distributor Verification" as distributorVerification
+    state "Analytics" as AdminAnalytics
+    state "System Settings" as SystemSettings
+    
+    [*] --> AdminDash
+    AdminDash --> AdminTracking : track orders
+    AdminDash --> Monitoring : system monitoring
+    AdminDash --> ErrorHandling : handle errors
+    AdminDash --> UserMgmt : manage users
+    AdminDash --> distributorVerification : verify distributors
+    AdminDash --> AdminAnalytics : view analytics
+    
+    AdminTracking --> AdminDash : back to dashboard
+    Monitoring --> ErrorHandling : resolve issues
+    Monitoring --> AdminDash : back to dashboard
+    ErrorHandling --> AdminDash : back to dashboard
+    UserMgmt --> AdminDash : back to dashboard
+    distributorVerification --> AdminDash : back to dashboard
+    AdminAnalytics --> AdminDash : back to dashboard
+    SystemSettings --> AdminDash : back to dashboard
+}
+
+' Authentication Flow
+state "Authentication" as Auth {
+    state "Login" as Login
+    state "Role Selection" as RoleSelect
+    state "Registration" as Register
+    state "Forgot Password" as ForgotPassword
+    state "Reset Password" as ResetPassword
+    
+    [*] --> Login
+    Login --> RoleSelect : successful login
+    Login --> Register : new user
+    Login --> ForgotPassword : forgot password
+    
+    Register --> Login : registration complete
+    ForgotPassword --> ResetPassword : email sent
+    ResetPassword --> Login : password reset
+    
+    RoleSelect --> CustomerPortal : customer role
+    RoleSelect --> PharmacyPortal : pharmacy role
+    RoleSelect --> distributorPortal : distributor role
+    RoleSelect --> AdminPortal : admin role
+}
+
+@enduml

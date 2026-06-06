@@ -1,0 +1,322 @@
+[
+  {
+    "productID": "PRD0001",
+    "pharmaID": "PH001",
+    "batchCode": "ALMO-0625",
+    "medicineName": "Almox 500 Capsule",
+    "composition": "Amoxicillin (500mg)",
+    "category": {
+      "primaryCategory": "Prescription Medicines",
+      "productType": "Medicine",
+      "therapeuticClass": "Antibiotic",
+      "dosageForm": "Capsule"
+    },
+    "description": "Almox 500 Capsule is a broad-spectrum antibiotic (amoxicillin) used to treat various bacterial infections, including infections of the throat, lungs, urinary tract, skin, stomach, and intestines. It also helps eliminate H. pylori in peptic ulcer disease.\n\nIt works by stopping bacteria from forming their protective cell wall, which kills the bacteria and stops infection growth.\n\nCommon side effects: Nausea, vomiting, diarrhea, and skin rash.\nUsage: Take as prescribed by your doctor and complete the full course, even if you feel better.",
+    "prescriptionRequired": true,
+    "manufacturer": "Alkem Laboratories Ltd",
+    "packaging": {
+      "quantityDescription": "15.0 capsules in 1 strip",
+      "mrp": 117.85,
+      "discountPercent": 28,
+      "price": 85.0,
+      "pricePerUnit": 0.0
+    },
+    "stock": {
+      "unitsAvailable": 25.0,
+      "threshold": 15.0,
+      "status": "AVAILABLE"
+    },
+    "storageCondition": "Store below 25°C",
+    "manufacturedDate": "13-09-2024",
+    "expiryDate": "12-09-2026",
+    "lastUpdated": "27-01-2026"
+  },
+  {
+    "productID": "PRD0002",
+    "pharmaID": "PH001",
+    "batchCode": "AZIC-0126",
+    "medicineName": "Azicip 500 Tablet",
+    "composition": "Azithromycin (500mg)",
+    "category": {
+      "primaryCategory": "Prescription Medicines",
+      "productType": "Medicine",
+      "therapeuticClass": "Antibiotic",
+      "dosageForm": "Tablet"
+    },
+    "description": "Azicip 500 Tablet (Azithromycin) is a broad-spectrum antibiotic used to treat bacterial infections of the respiratory tract, ear, nose, throat, lungs, skin, eye, typhoid fever, and some sexually transmitted diseases like gonorrhea.\n\nIt works by stopping bacteria from producing essential proteins needed for growth, helping to clear the infection.\n\nCommon side effects: Diarrhea, nausea, vomiting, and stomach pain.\nUsage: Take as prescribed, at a fixed time, and complete the full course even if symptoms improve.",
+    "prescriptionRequired": true,
+    "manufacturer": "Cipla Ltd",
+    "packaging": {
+      "quantityDescription": "3.0 tablets in 1 strip",
+      "mrp": 75.53,
+      "discountPercent": 20,
+      "price": 61.0,
+      "pricePerUnit": 0.0
+    },
+    "stock": {
+      "unitsAvailable": 30.0,
+      "threshold": 15.0,
+      "status": "AVAILABLE"
+    },
+    "storageCondition": "Store below 25°C",
+    "manufacturedDate": "20-07-2024",
+    "expiryDate": "19-07-2026",
+    "lastUpdated": "27-01-2026"
+  },
+  {
+    "productID": "PRD0003",
+    "pharmaID": "PH001",
+    "batchCode": "TAXI-0826",
+    "medicineName": "Taxim-O 200 Tablet",
+    "composition": "Cefixime (200mg)",
+    "category": {
+      "primaryCategory": "Prescription Medicines",
+      "productType": "Medicine",
+      "therapeuticClass": "Antibiotic",
+      "dosageForm": "Tablet"
+    },
+    "description": "Taxim-O 200 Tablet (Cefixime) is an antibiotic used to treat bacterial infections of the respiratory tract, urinary tract, ear, throat, nasal sinuses, and some sexually transmitted diseases.\n\nIt works by preventing bacteria from forming their protective cell wall, which kills the bacteria and stops the infection from spreading.\n\nCommon side effects: Nausea, stomach pain, indigestion, and diarrhea.\nUsage: Take as prescribed by your doctor and complete the full course to prevent infection recurrence.",
+    "prescriptionRequired": true,
+    "manufacturer": "Alkem Laboratories Ltd",
+    "packaging": {
+      "quantityDescription": "10.0 tablets in 1 strip",
+      "mrp": 104.43,
+      "discountPercent": 2,
+      "price": 102.0,
+      "pricePerUnit": 0.0
+    },
+    "stock": {
+      "unitsAvailable": 32.0,
+      "threshold": 15.0,
+      "status": "AVAILABLE"
+    },
+    "storageCondition": "Store below 25°C",
+    "manufacturedDate": "26-09-2025",
+    "expiryDate": "25-09-2027",
+    "lastUpdated": "27-01-2026"
+  },
+  {
+    "productID": "PRD0004",
+    "pharmaID": "PH001",
+    "batchCode": "OKAM-0325",
+    "medicineName": "Okamet 500 Tablet",
+    "composition": "Metformin (500mg)",
+    "category": {
+      "primaryCategory": "Prescription Medicines",
+      "productType": "Medicine",
+      "therapeuticClass": "Analgesic",
+      "dosageForm": "Tablet"
+    },
+    "description": "Okamet 500 Tablet (Metformin) is an anti-diabetic medicine used to manage type 2 diabetes mellitus by controlling blood sugar levels. It is also used to treat Polycystic Ovary Syndrome (PCOS) by improving insulin sensitivity and helping regulate menstrual cycles.\n\nIt works by reducing glucose production in the liver, slowing sugar absorption in the intestines, and improving the bodys response to insulin.\n\nCommon side effects: Diarrhea, nausea, vomiting, headache, and abdominal discomfort.\nUsage: Take with food as prescribed by your doctor, along with a healthy diet and regular exercise.",
+    "prescriptionRequired": true,
+    "manufacturer": "Cipla Ltd",
+    "packaging": {
+      "quantityDescription": "20.0 tablets in 1 strip",
+      "mrp": 26.33,
+      "discountPercent": 22,
+      "price": 21.0,
+      "pricePerUnit": 0.0
+    },
+    "stock": {
+      "unitsAvailable": 29.0,
+      "threshold": 15.0,
+      "status": "EXPIRING_SOON"
+    },
+    "storageCondition": "Store below 25°C",
+    "manufacturedDate": "09-09-2024",
+    "expiryDate": "08-03-2026",
+    "lastUpdated": "27-01-2026"
+  },
+  {
+    "productID": "PRD0005",
+    "pharmaID": "PH001",
+    "batchCode": "TELM-0325",
+    "medicineName": "Telma 40 Tablet",
+    "composition": "Telmisartan (40mg)",
+    "category": {
+      "primaryCategory": "Prescription Medicines",
+      "productType": "Medicine",
+      "therapeuticClass": "Analgesic",
+      "dosageForm": "Tablet"
+    },
+    "description": "Telma 40 Tablet (Telmisartan) is used to treat high blood pressure (hypertension) and heart failure, and to reduce the risk of heart attack and stroke. It also helps protect kidney function in patients with diabetes.\n\nIt works by relaxing blood vessels, allowing blood to flow more easily and lowering blood pressure.\n\nCommon side effects: Diarrhea, back pain, sinus inflammation, and skin ulcers.\nUsage: Take once daily at the same time, with or without food, as prescribed by your doctor.",
+    "prescriptionRequired": true,
+    "manufacturer": "Glenmark Pharmaceuticals Ltd",
+    "packaging": {
+      "quantityDescription": "30.0 tablets in 1 strip",
+      "mrp": 212.9,
+      "discountPercent": 2,
+      "price": 209.0,
+      "pricePerUnit": 0.0
+    },
+    "stock": {
+      "unitsAvailable": 25.0,
+      "threshold": 15.0,
+      "status": "EXPIRING_SOON"
+    },
+    "storageCondition": "Store below 25°C",
+    "manufacturedDate": "18-10-2024",
+    "expiryDate": "17-04-2026",
+    "lastUpdated": "27-01-2026"
+  },
+  {
+    "productID": "PRD0006",
+    "pharmaID": "PH001",
+    "batchCode": "AMLI-1026",
+    "medicineName": "AMlip 5 Tablet",
+    "composition": "Amlodipine (5mg)",
+    "category": {
+      "primaryCategory": "Prescription Medicines",
+      "productType": "Medicine",
+      "therapeuticClass": "Analgesic",
+      "dosageForm": "Tablet"
+    },
+    "description": "AMlip 5 Tablet (Amlodipine) is a calcium channel blocker used to treat high blood pressure (hypertension) and angina (heart-related chest pain). It helps prevent heart attacks and strokes by lowering blood pressure and reducing the hearts workload.\n\nIt works by relaxing blood vessels, improving blood flow, and reducing strain on the heart.\n\nCommon side effects: Headache, fatigue, nausea, abdominal pain, sleepiness, and swelling (edema).\nUsage: Take once daily at the same time, with or without food, as prescribed by your doctor.",
+    "prescriptionRequired": true,
+    "manufacturer": "Cipla Ltd",
+    "packaging": {
+      "quantityDescription": "10.0 tablets in 1 strip",
+      "mrp": 26.66,
+      "discountPercent": 34,
+      "price": 17.5,
+      "pricePerUnit": 0.0
+    },
+    "stock": {
+      "unitsAvailable": 40.0,
+      "threshold": 15.0,
+      "status": "AVAILABLE"
+    },
+    "storageCondition": "Store below 25°C",
+    "manufacturedDate": "24-03-2025",
+    "expiryDate": "23-03-2027",
+    "lastUpdated": "27-01-2026"
+  },
+  {
+    "productID": "PRD0007",
+    "pharmaID": "PH001",
+    "batchCode": "LOSA-0727",
+    "medicineName": "Losar 50 Tablet",
+    "composition": "Losartan (50mg)",
+    "category": {
+      "primaryCategory": "Prescription Medicines",
+      "productType": "Medicine",
+      "therapeuticClass": "Antihypertensive",
+      "dosageForm": "Tablet"
+    },
+    "description": "Losar 50 Tablet (Losartan) is used to treat high blood pressure and heart failure, and to reduce the risk of heart attack and stroke. It also helps protect kidney function in diabetic patients.\n\nIt works by relaxing blood vessels, improving blood flow, and lowering blood pressure.\n\nCommon side effects: Dizziness, low blood pressure, and increased potassium levels.\nUsage: Take once daily at the same time, with or without food, as prescribed by your doctor.",
+    "prescriptionRequired": true,
+    "manufacturer": "Torrent Pharmaceuticals Ltd",
+    "packaging": {
+      "quantityDescription": "15.0 tablets in 1 strip",
+      "mrp": 162.25,
+      "discountPercent": 2,
+      "price": 159.0,
+      "pricePerUnit": 0.0
+    },
+    "stock": {
+      "unitsAvailable": 24.0,
+      "threshold": 15.0,
+      "status": "AVAILABLE"
+    },
+    "storageCondition": "Store below 25°C",
+    "manufacturedDate": "01-10-2025",
+    "expiryDate": "30-09-2027",
+    "lastUpdated": "27-01-2026"
+  },
+  {
+    "productID": "PRD0008",
+    "pharmaID": "PH001",
+    "batchCode": "LIPV-0725",
+    "medicineName": "LipVAS 20 Tablet",
+    "composition": "Atorvastatin (20mg)",
+    "category": {
+      "primaryCategory": "Prescription Medicines",
+      "productType": "Medicine",
+      "therapeuticClass": "Analgesic",
+      "dosageForm": "Tablet"
+    },
+    "description": "LipVAS 20 Tablet (Atorvastatin) is a statin used to lower cholesterol and triglycerides and reduce the risk of heart attack and stroke.\n\nIt works by blocking cholesterol production in the liver, lowering bad cholesterol (LDL) and increasing good cholesterol (HDL).\n\nCommon side effects: Indigestion, diarrhea, nausea, and muscle or joint pain.\nUsage: Take once daily at the same time, with or without food, as prescribed by your doctor.",
+    "prescriptionRequired": true,
+    "manufacturer": "Cipla Ltd",
+    "packaging": {
+      "quantityDescription": "10.0 tablets in 1 strip",
+      "mrp": 134.18,
+      "discountPercent": 46,
+      "price": 72.0,
+      "pricePerUnit": 0.0
+    },
+    "stock": {
+      "unitsAvailable": 2.0,
+      "threshold": 15.0,
+      "status": "EXPIRED"
+    },
+    "storageCondition": "Store below 25°C",
+    "manufacturedDate": "29-12-2023",
+    "expiryDate": "28-12-2025",
+    "lastUpdated": "09-12-2025"
+  },
+  {
+    "productID": "PRD0009",
+    "pharmaID": "PH001",
+    "batchCode": "PANT-1026",
+    "medicineName": "Pantop-D Capsule",
+    "composition": "Domperidone (10mg) + Pantoprazole (20mg)",
+    "category": {
+      "primaryCategory": "Prescription Medicines",
+      "productType": "Medicine",
+      "therapeuticClass": "Analgesic",
+      "dosageForm": "Capsule"
+    },
+    "description": "Pantop-D Capsule (Pantoprazole + Domperidone) is used to treat acid reflux (GERD), gastritis, ulcers, and indigestion. It reduces stomach acid and improves digestion by helping the stomach empty faster.\n\nCommon side effect: Dry mouth, headache, nausea.\nUsage: Take once daily before food, as prescribed by your doctor.",
+    "prescriptionRequired": true,
+    "manufacturer": "Aristo Pharmaceuticals Pvt Ltd",
+    "packaging": {
+      "quantityDescription": "15.0 capsules in 1 strip",
+      "mrp": 182.8,
+      "discountPercent": 2,
+      "price": 179.0,
+      "pricePerUnit": 0.0
+    },
+    "stock": {
+      "unitsAvailable": 15.0,
+      "threshold": 15.0,
+      "status": "AVAILABLE"
+    },
+    "storageCondition": "Store below 25°C",
+    "manufacturedDate": "24-10-2024",
+    "expiryDate": "23-10-2026",
+    "lastUpdated": "27-01-2026"
+  },
+  {
+    "productID": "PRD0010",
+    "pharmaID": "PH001",
+    "batchCode": "LEVO-0925",
+    "medicineName": "Levoquin 500mg Tablet",
+    "composition": "Levofloxacin (500mg)",
+    "category": {
+      "primaryCategory": "Prescription Medicines",
+      "productType": "Medicine",
+      "therapeuticClass": "Antibiotic",
+      "dosageForm": "Tablet"
+    },
+    "description": "Levoquin 500 mg Tablet (Levofloxacin) is an antibiotic used to treat bacterial infections of the lungs (pneumonia), urinary tract, nose, throat, skin, and soft tissues.\n\nIt works by stopping bacterial DNA replication, which kills the bacteria and stops infection spread.\n\nCommon side effects: Headache, dizziness, nausea, constipation, and diarrhea.\nUsage: Take once daily at a fixed time, avoid dairy products, and complete the full prescribed course.",
+    "prescriptionRequired": true,
+    "manufacturer": "Cipla Ltd",
+    "packaging": {
+      "quantityDescription": "5.0 tablets in 1 strip",
+      "mrp": 47.19,
+      "discountPercent": 29,
+      "price": 33.5,
+      "pricePerUnit": 0.0
+    },
+    "stock": {
+      "unitsAvailable": 0.0,
+      "threshold": 15.0,
+      "status": "OUT_OF_STOCK"
+    },
+    "storageCondition": "Store below 30°C",
+    "manufacturedDate": "17-12-2023",
+    "expiryDate": "16-12-2025",
+    "lastUpdated": "27-10-2025"
+  }
+]

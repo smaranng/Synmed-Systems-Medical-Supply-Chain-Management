@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pandas
+numpy
+prophet
+statsmodels
+python-dotenv
+scipy
+openpyxl
+groq
+pymongo

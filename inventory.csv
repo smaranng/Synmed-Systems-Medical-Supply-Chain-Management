@@ -1,0 +1,209 @@
+productID,pharmaID,batchCode,medicineName,composition,description,category,prescriptionRequired,manufacturer,quantity,mrpWithDiscount,price,pricePerUnit,unitsAvailable,threshold,storageCondition,manufacturedDate,expiryDate,status,lastUpdated
+PRD0001,PH001,ALMO-0625,Almox 500 Capsule,Amoxicillin (500mg),"Almox 500 Capsule is a broad-spectrum antibiotic (amoxicillin) used to treat various bacterial infections, including infections of the throat, lungs, urinary tract, skin, stomach, and intestines. It also helps eliminate H. pylori in peptic ulcer disease.
+
+It works by stopping bacteria from forming their protective cell wall, which kills the bacteria and stops infection growth.
+
+Common side effects: Nausea, vomiting, diarrhea, and skin rash.
+Usage: Take as prescribed by your doctor and complete the full course, even if you feel better.",Prescription Medicines,Yes,Alkem Laboratories Ltd,15.0 capsules in 1 strip,MRP?117.85  28% OFF,85,0,25,15,Store below 25°C,13-09-2024,12-09-2026,AVAILABLE,27-01-2026
+PRD0002,PH001,AZIC-0126,Azicip 500 Tablet,Azithromycin (500mg),"Azicip 500 Tablet (Azithromycin) is a broad-spectrum antibiotic used to treat bacterial infections of the respiratory tract, ear, nose, throat, lungs, skin, eye, typhoid fever, and some sexually transmitted diseases like gonorrhea.
+
+It works by stopping bacteria from producing essential proteins needed for growth, helping to clear the infection.
+
+Common side effects: Diarrhea, nausea, vomiting, and stomach pain.
+Usage: Take as prescribed, at a fixed time, and complete the full course even if symptoms improve.",Prescription Medicines,Yes,Cipla Ltd,3.0 tablets in 1 strip,MRP?75.53  20% OFF,61,0,30,15,Store below 25°C,20-07-2024,19-07-2026,AVAILABLE,27-01-2026
+PRD0003,PH001,TAXI-0826,Taxim-O 200 Tablet,Cefixime (200mg),"Taxim-O 200 Tablet (Cefixime) is an antibiotic used to treat bacterial infections of the respiratory tract, urinary tract, ear, throat, nasal sinuses, and some sexually transmitted diseases.
+
+It works by preventing bacteria from forming their protective cell wall, which kills the bacteria and stops the infection from spreading.
+
+Common side effects: Nausea, stomach pain, indigestion, and diarrhea.
+Usage: Take as prescribed by your doctor and complete the full course to prevent infection recurrence.",Prescription Medicines,Yes,Alkem Laboratories Ltd,10.0 tablets in 1 strip,MRP?104.43  2% OFF,102,0,32,15,Store below 25°C,26-09-2025,25-09-2027,AVAILABLE,27-01-2026
+PRD0004,PH001,OKAM-0325,Okamet 500 Tablet,Metformin (500mg),"Okamet 500 Tablet (Metformin) is an anti-diabetic medicine used to manage type 2 diabetes mellitus by controlling blood sugar levels. It is also used to treat Polycystic Ovary Syndrome (PCOS) by improving insulin sensitivity and helping regulate menstrual cycles.
+
+It works by reducing glucose production in the liver, slowing sugar absorption in the intestines, and improving the body’s response to insulin.
+
+Common side effects: Diarrhea, nausea, vomiting, headache, and abdominal discomfort.
+Usage: Take with food as prescribed by your doctor, along with a healthy diet and regular exercise.",Prescription Medicines,Yes,Cipla Ltd,20.0 tablets in 1 strip,MRP?26.33  22% OFF,21,0,29,15,Store below 25°C,09-09-2024,08-03-2026,EXPIRING_SOON,27-01-2026
+PRD0005,PH001,TELM-0325,Telma 40 Tablet,Telmisartan (40mg),"Telma 40 Tablet (Telmisartan) is used to treat high blood pressure (hypertension) and heart failure, and to reduce the risk of heart attack and stroke. It also helps protect kidney function in patients with diabetes.
+
+It works by relaxing blood vessels, allowing blood to flow more easily and lowering blood pressure.
+
+Common side effects: Diarrhea, back pain, sinus inflammation, and skin ulcers.
+Usage: Take once daily at the same time, with or without food, as prescribed by your doctor.",Prescription Medicines,Yes,Glenmark Pharmaceuticals Ltd,30.0 tablets in 1 strip,MRP?212.9  2% OFF,209,0,25,15,Store below 25°C,18-10-2024,17-04-2026,EXPIRING_SOON,27-01-2026
+PRD0006,PH001,AMLI-1026,AMlip 5 Tablet,Amlodipine (5mg),"AMlip 5 Tablet (Amlodipine) is a calcium channel blocker used to treat high blood pressure (hypertension) and angina (heart-related chest pain). It helps prevent heart attacks and strokes by lowering blood pressure and reducing the heart’s workload.
+
+It works by relaxing blood vessels, improving blood flow, and reducing strain on the heart.
+
+Common side effects: Headache, fatigue, nausea, abdominal pain, sleepiness, and swelling (edema).
+Usage: Take once daily at the same time, with or without food, as prescribed by your doctor.",Prescription Medicines,Yes,Cipla Ltd,10.0 tablets in 1 strip,MRP?26.66  34% OFF,17.5,0,40,15,Store below 25°C,24-03-2025,23-03-2027,AVAILABLE,27-01-2026
+PRD0007,PH001,LOSA-0727,Losar 50 Tablet,Losartan (50mg),"Losar 50 Tablet (Losartan) is used to treat high blood pressure and heart failure, and to reduce the risk of heart attack and stroke. It also helps protect kidney function in diabetic patients.
+
+It works by relaxing blood vessels, improving blood flow, and lowering blood pressure.
+
+Common side effects: Dizziness, low blood pressure, and increased potassium levels.
+Usage: Take once daily at the same time, with or without food, as prescribed by your doctor.",Prescription Medicines,Yes,Torrent Pharmaceuticals Ltd,15.0 tablets in 1 strip,MRP?162.25  2% OFF,159,0,24,15,Store below 25°C,01-10-2025,30-09-2027,AVAILABLE,27-01-2026
+PRD0008,PH001,LIPV-0725,LipVAS 20 Tablet,Atorvastatin (20mg),"LipVAS 20 Tablet (Atorvastatin) is a statin used to lower cholesterol and triglycerides and reduce the risk of heart attack and stroke.
+
+It works by blocking cholesterol production in the liver, lowering bad cholesterol (LDL) and increasing good cholesterol (HDL).
+
+Common side effects: Indigestion, diarrhea, nausea, and muscle or joint pain.
+Usage: Take once daily at the same time, with or without food, as prescribed by your doctor.",Prescription Medicines,Yes,Cipla Ltd,10.0 tablets in 1 strip,MRP?134.18  46% OFF,72,0,2,15,Store below 25°C,29-12-2023,28-12-2025,EXPIRED,09-12-2025
+PRD0009,PH001,PANT-1026,Pantop-D Capsule,Domperidone (10mg) + Pantoprazole (20mg),"Pantop-D Capsule (Pantoprazole + Domperidone) is used to treat acid reflux (GERD), gastritis, ulcers, and indigestion. It reduces stomach acid and improves digestion by helping the stomach empty faster.
+
+Common side effect: Dry mouth, headache, nausea.
+Usage: Take once daily before food, as prescribed by your doctor.",Prescription Medicines,Yes,Aristo Pharmaceuticals Pvt Ltd,15.0 capsules in 1 strip,MRP?182.8  2% OFF,179,0,15,15,Store below 25°C,24-10-2024,23-10-2026,AVAILABLE,27-01-2026
+PRD0010,PH001,LEVO-0925,Levoquin 500mg Tablet,Levofloxacin (500mg),"Levoquin 500 mg Tablet (Levofloxacin) is an antibiotic used to treat bacterial infections of the lungs (pneumonia), urinary tract, nose, throat, skin, and soft tissues.
+
+It works by stopping bacterial DNA replication, which kills the bacteria and stops infection spread.
+
+Common side effects: Headache, dizziness, nausea, constipation, and diarrhea.
+Usage: Take once daily at a fixed time, avoid dairy products, and complete the full prescribed course.",Prescription Medicines,Yes,Cipla Ltd,5.0 tablets in 1 strip,MRP?47.19  29% OFF,33.5,0,0,15,Store below 30°C,17-12-2023,16-12-2025,OUT_OF_STOCK,27-10-2025
+PRD0011,PH001,,Doxycycline,Doxycycline,,Prescription Medicines,Yes,Cipla,Standard Pack,,624,16,,15,Store below 25°C,19-08-2024,29-12-2026,AVAILABLE,27-01-2026
+PRD0012,PH001,,Prednisolone,Prednisolone,,Prescription Medicines,Yes,Cipla,Standard Pack,,2550,30,,15,Store below 25°C,17-04-2025,13-04-2026,AVAILABLE,27-01-2026
+PRD0013,PH001,,Montelukast,Montelukast,,Prescription Medicines,Yes,Mankind,Standard Pack,,5181,33,,15,Store below 25°C,03-08-2025,14-03-2026,EXPIRING_SOON,27-01-2026
+PRD0014,PH001,,Escitalopram,Escitalopram,,Prescription Medicines,Yes,Cipla,Standard Pack,,5548,38,,15,Store below 25°C,10-09-2025,23-02-2027,AVAILABLE,27-01-2026
+PRD0015,PH001,,Olanzapine,Olanzapine,,Prescription Medicines,Yes,Sun Pharma,Standard Pack,,420,12,,15,Store below 25°C,27-07-2025,13-08-2026,AVAILABLE,27-01-2026
+PRD0016,PH001,,,Paracetamol,,OTC Medicines,,Abbott,Standard Pack,,121,11,,,,05-10-2025,13-03-2028,AVAILABLE,27-01-2026
+PRD0017,PH001,,Ibuprofen,Ibuprofen,,OTC Medicines,,Sun Pharma,Standard Pack,,3174,46,,,,15-06-2024,22-10-2025,EXPIRED,27-01-2026
+PRD0018,PH001,,Cetirizine,Cetirizine,,OTC Medicines,,Mankind,Standard Pack,,6972,42,,,,04-03-2025,17-11-2026,AVAILABLE,27-01-2026
+PRD0019,PH001,,ORS,ORS,,OTC Medicines,,Dr Reddyâ€™s,Standard Pack,,4800,48,,,,16-05-2025,24-10-2026,AVAILABLE,27-01-2026
+PRD0020,PH001,,Digene,Digene,,OTC Medicines,,Dr Reddyâ€™s,Standard Pack,,4464,36,,,,03-09-2025,14-01-2027,AVAILABLE,27-01-2026
+PRD0021,PH001,,Vicks,Vicks,,OTC Medicines,,Cipla,Standard Pack,,3612,21,,,,25-06-2025,19-11-2027,AVAILABLE,27-01-2026
+PRD0022,PH001,,Benadryl,Benadryl,,OTC Medicines,,Dr Reddyâ€™s,Standard Pack,,3927,21,,,,13-12-2024,23-05-2027,AVAILABLE,27-01-2026
+PRD0023,PH001,,Calpol,Electral,,OTC Medicines,,Sun Pharma,Standard Pack,,4407,39,,,,01-09-2025,18-01-2028,AVAILABLE,27-01-2026
+PRD0024,PH001,,Saridon,Saridon,,OTC Medicines,,Mankind,Standard Pack,,7052,43,,,,04-03-2025,19-02-2026,EXPIRING_SOON,27-01-2026
+PRD0025,PH001,,Dolo 650,Dolo 650,,OTC Medicines,,Abbott,Standard Pack,,384,16,,,,29-06-2025,09-06-2027,AVAILABLE,27-01-2026
+PRD0026,PH001,,Ascoril,Ascoril,,OTC Medicines,,Sun Pharma,Standard Pack,,9108,46,,,,04-03-2025,15-02-2027,AVAILABLE,27-01-2026
+PRD0027,PH001,,Zincovit,Zincovit,,OTC Medicines,,Cipla,Standard Pack,,570,15,,,,08-10-2025,08-01-2027,AVAILABLE,27-01-2026
+PRD0028,PH001,,Crocin 650,Crocin,,OTC Medicines,,Abbott,Standard Pack,,900,5,,,,08-10-2025,10-04-2026,AVAILABLE,27-01-2026
+PRD0029,PH001,,Strepsils,Strepsils,,OTC Medicines,,Cipla,Standard Pack,,4794,34,,,,24-01-2025,31-08-2026,AVAILABLE,27-01-2026
+PRD0030,PH001,,Disprin,Disprin,,OTC Medicines,,Sun Pharma,Standard Pack,,1826,11,,,,26-06-2025,15-05-2027,AVAILABLE,27-01-2026
+PRD0031,PH001,,Insulin,Insulin,,Chronic Care Medicines,,Cipla,Standard Pack,,2408,14,,,,12-09-2025,20-12-2027,AVAILABLE,27-01-2026
+PRD0032,PH001,,Metformin XR,Metformin XR,,Chronic Care Medicines,,Dr Reddyâ€™s,Standard Pack,,1368,24,,,,14-06-2025,25-09-2026,AVAILABLE,27-01-2026
+PRD0033,PH001,,Glimepiride,Glimepiride,,Chronic Care Medicines,,Dr Reddyâ€™s,Standard Pack,,3528,28,,,,07-07-2025,25-06-2027,AVAILABLE,27-01-2026
+PRD0034,PH001,,Atenolol,Atenolol,,Chronic Care Medicines,,Abbott,Standard Pack,,3016,29,,,,16-07-2024,21-12-2026,AVAILABLE,27-01-2026
+PRD0035,PH001,,Ramipril,Ramipril,,Chronic Care Medicines,,Dr Reddyâ€™s,Standard Pack,,2700,20,,,,03-05-2024,16-11-2024,EXPIRED,27-01-2026
+PRD0036,PH001,,Rosuvastatin,Rosuvastatin,,Chronic Care Medicines,,Cipla,Standard Pack,,2448,34,,,,25-09-2024,29-08-2026,AVAILABLE,27-01-2026
+PRD0037,PH001,,Clopidogrel,Clopidogrel,,Chronic Care Medicines,,Abbott,Standard Pack,,595,7,,,,14-10-2024,26-11-2026,AVAILABLE,27-01-2026
+PRD0038,PH001,,Levothyroxine,Levothyroxine,,Chronic Care Medicines,,Sun Pharma,Standard Pack,,891,9,,,,26-05-2024,09-08-2025,EXPIRED,27-01-2026
+PRD0039,PH001,,Sitagliptin,Sitagliptin,,Chronic Care Medicines,,Mankind,Standard Pack,,2613,39,,,,30-06-2025,26-04-2026,AVAILABLE,27-01-2026
+PRD0040,PH001,,Pioglitazone,Pioglitazone,,Chronic Care Medicines,,Abbott,Standard Pack,,1596,14,,,,04-10-2024,29-01-2027,AVAILABLE,27-01-2026
+PRD0041,PH001,,Nebivolol,Nebivolol,,Chronic Care Medicines,,Dr Reddyâ€™s,Standard Pack,,1230,10,,,,26-08-2025,01-03-2027,AVAILABLE,27-01-2026
+PRD0042,PH001,,Carvedilol,Carvedilol,,Chronic Care Medicines,,Dr Reddyâ€™s,Standard Pack,,2156,28,,,,21-03-2025,11-02-2026,EXPIRING_SOON,27-01-2026
+PRD0043,PH001,,Ezetimibe,Ezetimibe,,Chronic Care Medicines,,Cipla,Standard Pack,,1792,16,,,,14-05-2025,08-07-2026,AVAILABLE,27-01-2026
+PRD0044,PH001,,Valsartan,Valsartan,,Chronic Care Medicines,,Mankind,Standard Pack,,460,5,,,,10-11-2024,22-01-2026,EXPIRED,27-01-2026
+PRD0045,PH001,,Empagliflozin,Empagliflozin,,Chronic Care Medicines,,Abbott,Standard Pack,,1755,9,,,,03-01-2025,07-09-2026,AVAILABLE,27-01-2026
+PRD0046,PH001,,Diclofenac,Diclofenac,,Acute Care Medicines,,Sun Pharma,Standard Pack,,1190,14,,,,17-07-2025,26-07-2026,AVAILABLE,27-01-2026
+PRD0047,PH001,,Naproxen,Naproxen,,Acute Care Medicines,,Mankind,Standard Pack,,957,29,,,,01-10-2025,21-12-2027,AVAILABLE,27-01-2026
+PRD0048,PH001,,Aceclofenac,Aceclofenac,,Acute Care Medicines,,Mankind,Standard Pack,,984,12,,,,24-05-2025,25-03-2027,AVAILABLE,27-01-2026
+PRD0049,PH001,,Ondansetron,Ondansetron,,Acute Care Medicines,,Mankind,Standard Pack,,5811,39,,,,08-09-2024,24-07-2025,EXPIRED,27-01-2026
+PRD0050,PH001,,Ranitidine,Ranitidine,,Acute Care Medicines,,Sun Pharma,Standard Pack,,2318,38,,,,28-07-2025,29-07-2026,AVAILABLE,27-01-2026
+PRD0051,PH001,,Ciprofloxacin,Ciprofloxacin,,Acute Care Medicines,,Sun Pharma,Standard Pack,,3720,31,,,,12-10-2024,09-08-2026,AVAILABLE,27-01-2026
+PRD0052,PH001,,Ofloxacin,Ofloxacin,,Acute Care Medicines,,Mankind,Standard Pack,,1850,50,,,,23-08-2025,12-10-2027,AVAILABLE,27-01-2026
+PRD0053,PH001,,Tinidazole,Tinidazole,,Acute Care Medicines,,Sun Pharma,Standard Pack,,1320,20,,,,01-03-2025,23-05-2027,AVAILABLE,27-01-2026
+PRD0054,PH001,,Metronidazole,Metronidazole,,Acute Care Medicines,,Dr Reddyâ€™s,Standard Pack,,4375,35,,,,08-06-2024,28-07-2026,AVAILABLE,27-01-2026
+PRD0055,PH001,,Tramadol,Tramadol,,Acute Care Medicines,,Dr Reddyâ€™s,Standard Pack,,2544,24,,,,17-09-2024,10-07-2026,AVAILABLE,27-01-2026
+PRD0056,PH001,,Ketorolac,Ketorolac,,Acute Care Medicines,,Sun Pharma,Standard Pack,,4031,29,,,,02-05-2024,07-06-2026,AVAILABLE,27-01-2026
+PRD0057,PH001,,Domperidone,Domperidone,,Acute Care Medicines,,Dr Reddyâ€™s,Standard Pack,,1485,9,,,,26-04-2025,20-08-2027,AVAILABLE,27-01-2026
+PRD0058,PH001,,Loperamide,Loperamide,,Acute Care Medicines,,Abbott,Standard Pack,,3667,19,,,,07-10-2024,14-11-2025,EXPIRED,27-01-2026
+PRD0059,PH001,,Chlorpheniramine,Chlorpheniramine,,Acute Care Medicines,,Dr Reddyâ€™s,Standard Pack,,5920,37,,,,24-06-2024,12-05-2025,EXPIRED,27-01-2026
+PRD0060,PH001,,Hydroxychloroquine,Hydroxychloroquine,,Acute Care Medicines,,Sun Pharma,Standard Pack,,3320,40,,,,30-06-2024,23-11-2025,EXPIRED,27-01-2026
+PRD0061,PH001,,Zincovit,Zincovit,,Supplements & Nutrition,,Dr Reddyâ€™s,Standard Pack,,1480,20,,,,21-07-2024,22-04-2025,EXPIRED,27-01-2026
+PRD0062,PH001,,Becosules,Becosules,,Supplements & Nutrition,,Dr Reddyâ€™s,Standard Pack,,5249,29,,,,02-03-2024,14-02-2026,EXPIRING_SOON,27-01-2026
+PRD0063,PH001,,Revital H,Revital H,,Supplements & Nutrition,,Cipla,Standard Pack,,3920,49,,,,12-01-2025,04-03-2026,EXPIRING_SOON,27-01-2026
+PRD0064,PH001,,Supradyn,Supradyn,,Supplements & Nutrition,,Abbott,Standard Pack,,555,37,,,,30-05-2025,07-03-2026,EXPIRING_SOON,27-01-2026
+PRD0065,PH001,,Shelcal,Shelcal,,Supplements & Nutrition,,Abbott,Standard Pack,,5848,43,,,,15-08-2025,19-07-2026,AVAILABLE,27-01-2026
+PRD0066,PH001,,Caltrate,Caltrate,,Supplements & Nutrition,,Abbott,Standard Pack,,3510,45,,,,23-05-2024,27-06-2026,AVAILABLE,27-01-2026
+PRD0067,PH001,,Neurobion,Neurobion,,Supplements & Nutrition,,Dr Reddyâ€™s,Standard Pack,,3078,27,,,,13-10-2025,27-02-2027,AVAILABLE,27-01-2026
+PRD0068,PH001,,Health OK,Health OK,,Supplements & Nutrition,,Abbott,Standard Pack,,1540,14,,,,21-03-2025,09-04-2026,AVAILABLE,27-01-2026
+PRD0069,PH001,,Ensure,Ensure,,Supplements & Nutrition,,Sun Pharma,Standard Pack,,700,10,,,,05-11-2024,20-03-2026,EXPIRING_SOON,27-01-2026
+PRD0070,PH001,,Pediasure,Pediasure,,Supplements & Nutrition,,Sun Pharma,Standard Pack,,2478,42,,,,09-04-2025,15-09-2026,AVAILABLE,27-01-2026
+PRD0071,PH001,,Proteinex,Proteinex,,Supplements & Nutrition,,Dr Reddyâ€™s,Standard Pack,,1734,17,,,,10-12-2024,22-06-2025,EXPIRED,27-01-2026
+PRD0072,PH001,,Dexorange,Dexorange,,Supplements & Nutrition,,Abbott,Standard Pack,,2838,22,,,,06-07-2024,20-10-2025,EXPIRED,27-01-2026
+PRD0073,PH001,,Feroglobin,Feroglobin,,Supplements & Nutrition,,Abbott,Standard Pack,,2772,44,,,,07-04-2024,27-05-2026,AVAILABLE,27-01-2026
+PRD0074,PH001,,Nutrilite,Nutrilite,,Supplements & Nutrition,,Cipla,Standard Pack,,115,5,,,,13-07-2024,05-09-2025,EXPIRED,27-01-2026
+PRD0075,PH001,,Wellman,Wellman,,Supplements & Nutrition,,Dr Reddyâ€™s,Standard Pack,,144,12,,,,11-12-2024,28-01-2026,EXPIRING_SOON,27-01-2026
+PRD0076,PH001,,Betnovate,Betnovate,,Topical Medicines,,Abbott,Standard Pack,,5400,45,,,,01-11-2024,12-02-2027,AVAILABLE,27-01-2026
+PRD0077,PH001,,Candid Cream,Candid Cream,,Topical Medicines,,Dr Reddyâ€™s,Standard Pack,,1161,43,,,,20-06-2025,27-03-2027,AVAILABLE,27-01-2026
+PRD0078,PH001,,Soframycin,Soframycin,,Topical Medicines,,Cipla,Standard Pack,,1566,18,,,,19-05-2024,13-07-2025,EXPIRED,27-01-2026
+PRD0079,PH001,,Boroline,Boroline,,Topical Medicines,,Dr Reddyâ€™s,Standard Pack,,1088,16,,,,13-07-2024,22-02-2026,EXPIRING_SOON,27-01-2026
+PRD0080,PH001,,Neosporin,Neosporin,,Topical Medicines,,Cipla,Standard Pack,,1422,18,,,,15-10-2024,30-10-2025,EXPIRED,27-01-2026
+PRD0081,PH001,,Itch Guard,Itch Guard,,Topical Medicines,,Dr Reddyâ€™s,Standard Pack,,6327,37,,,,15-03-2024,25-02-2025,EXPIRED,27-01-2026
+PRD0082,PH001,,Quadriderm,Quadriderm,,Topical Medicines,,Abbott,Standard Pack,,1440,15,,,,24-05-2025,24-07-2027,AVAILABLE,27-01-2026
+PRD0083,PH001,,Zandu Balm,Zandu Balm,,Topical Medicines,,Cipla,Standard Pack,,4851,33,,,,07-05-2025,28-11-2026,AVAILABLE,27-01-2026
+PRD0084,PH001,,Voveran Gel,Voveran Gel,,Topical Medicines,,Mankind,Standard Pack,,6716,46,,,,12-11-2024,16-11-2025,EXPIRED,27-01-2026
+PRD0085,PH001,,Omnigel Pain Relief Gel,Pain Relief Gel,,Topical Medicines,,Dr Reddyâ€™s,Standard Pack,,2583,21,,,,25-05-2025,10-09-2026,AVAILABLE,27-01-2026
+PRD0086,PH001,,Volini,Volini,,Topical Medicines,,Mankind,Standard Pack,,3150,21,,,,16-05-2024,10-04-2026,AVAILABLE,27-01-2026
+PRD0087,PH001,,Iodex,Iodex,,Topical Medicines,,Cipla,Standard Pack,,3243,47,,,,08-08-2024,30-05-2026,AVAILABLE,27-01-2026
+PRD0088,PH001,,Ring Guard,Ring Guard,,Topical Medicines,,Mankind,Standard Pack,,3948,47,,,,11-09-2025,28-09-2027,AVAILABLE,27-01-2026
+PRD0089,PH001,,Canesten,Canesten,,Topical Medicines,,Dr Reddyâ€™s,Standard Pack,,1824,32,,,,16-06-2024,03-10-2026,AVAILABLE,27-01-2026
+PRD0090,PH001,,Clobetasol,Clobetasol,,Topical Medicines,,Cipla,Standard Pack,,1632,24,,,,24-01-2025,03-04-2026,AVAILABLE,27-01-2026
+PRD0091,PH001,,Insulin Injection,Insulin Injection,,Injectables & Vaccines,,Sun Pharma,Standard Pack,,3887,23,,,,23-04-2025,27-08-2027,AVAILABLE,27-01-2026
+PRD0092,PH001,,Hepatitis B Vaccine,Hepatitis B Vaccine,,Injectables & Vaccines,,Mankind,Standard Pack,,374,17,,,,11-03-2024,10-09-2025,EXPIRED,27-01-2026
+PRD0093,PH001,,TT Injection,TT Injection,,Injectables & Vaccines,,Cipla,Standard Pack,,2100,15,,,,18-08-2024,08-06-2026,AVAILABLE,27-01-2026
+PRD0094,PH001,,BCG Vaccine,BCG Vaccine,,Injectables & Vaccines,,Sun Pharma,Standard Pack,,5040,28,,,,23-04-2025,02-09-2027,AVAILABLE,27-01-2026
+PRD0095,PH001,,Rabies Vaccine,Rabies Vaccine,,Injectables & Vaccines,,Mankind,Standard Pack,,423,9,,,,17-12-2024,29-08-2026,AVAILABLE,27-01-2026
+PRD0096,PH001,,Ceftriaxone Injection,Ceftriaxone Injection,,Injectables & Vaccines,,Cipla,Standard Pack,,4128,24,,,,04-09-2025,01-12-2026,AVAILABLE,27-01-2026
+PRD0097,PH001,,Adrenaline Injection,Adrenaline Injection,,Injectables & Vaccines,,Abbott,Standard Pack,,1554,42,,,,20-12-2024,17-06-2026,AVAILABLE,27-01-2026
+PRD0098,PH001,,Dexamethasone Injection,Dexamethasone Injection,,Injectables & Vaccines,,Mankind,Standard Pack,,5250,30,,,,01-07-2025,05-11-2026,AVAILABLE,27-01-2026
+PRD0099,PH001,,Iron Sucrose Injection,Iron Sucrose Injection,,Injectables & Vaccines,,Abbott,Standard Pack,,1722,21,,,,02-07-2025,19-11-2027,AVAILABLE,27-01-2026
+PRD0100,PH001,,MMR Vaccine,MMR Vaccine,,Injectables & Vaccines,,Cipla,Standard Pack,,1545,15,,,,03-07-2024,28-08-2025,EXPIRED,27-01-2026
+PRD0101,PH001,,Flu Vaccine,Flu Vaccine,,Injectables & Vaccines,,Dr Reddyâ€™s,Standard Pack,,529,23,,,,22-06-2025,04-09-2027,AVAILABLE,27-01-2026
+PRD0102,PH001,,Vitamin B12 Injection,Vitamin B12 Injection,,Injectables & Vaccines,,Mankind,Standard Pack,,2310,42,,,,29-05-2024,13-01-2026,EXPIRED,27-01-2026
+PRD0103,PH001,,Digital Thermometer,Digital Thermometer,,Medical Devices,,Dr Reddyâ€™s,Standard Pack,,3724,49,,,,28-02-2025,09-06-2026,AVAILABLE,27-01-2026
+PRD0104,PH001,,BP Monitor,BP Monitor,,Medical Devices,,Dr Reddyâ€™s,Standard Pack,,2363,17,,,,03-06-2025,04-03-2027,AVAILABLE,27-01-2026
+PRD0105,PH001,,Glucometer,Glucometer,,Medical Devices,,Cipla,Standard Pack,,4477,37,,,,08-06-2025,30-12-2025,EXPIRED,27-01-2026
+PRD0106,PH001,,Pulse Oximeter,Pulse Oximeter,,Medical Devices,,Mankind,Standard Pack,,2378,29,,,,12-08-2025,23-02-2026,EXPIRING_SOON,27-01-2026
+PRD0107,PH001,,Nebulizer,Nebulizer,,Medical Devices,,Mankind,Standard Pack,,2101,11,,,,02-09-2024,10-05-2025,EXPIRED,27-01-2026
+PRD0108,PH001,,Insulin Pen,Insulin Pen,,Medical Devices,,Cipla,Standard Pack,,8500,50,,,,16-09-2024,20-01-2027,AVAILABLE,27-01-2026
+PRD0109,PH001,,Weighing Scale,Weighing Scale,,Medical Devices,,Dr Reddyâ€™s,Standard Pack,,5544,28,,,,18-04-2025,14-05-2027,AVAILABLE,27-01-2026
+PRD0110,PH001,,Infrared Thermometer,Infrared Thermometer,,Medical Devices,,Mankind,Standard Pack,,210,21,,,,02-08-2025,12-07-2026,AVAILABLE,27-01-2026
+PRD0111,PH001,,Wheelchair,Wheelchair,,Medical Devices,,Mankind,Standard Pack,,2100,15,,,,03-08-2025,13-12-2027,AVAILABLE,27-01-2026
+PRD0112,PH001,,Surgical Mask,Surgical Mask,,Medical Devices,,Cipla,Standard Pack,,4225,25,,,,27-05-2025,28-10-2027,AVAILABLE,27-01-2026
+PRD0113,PH001,,N95 Mask,N95 Mask,,Medical Devices,,Abbott,Standard Pack,,968,11,,,,07-06-2025,05-08-2026,AVAILABLE,27-01-2026
+PRD0114,PH001,,Oxygen Cylinder,Oxygen Cylinder,,Medical Devices,,Dr Reddyâ€™s,Standard Pack,,8050,46,,,,01-03-2025,10-07-2027,AVAILABLE,27-01-2026
+PRD0115,PH001,,Hearing Aid,Hearing Aid,,Medical Devices,,Mankind,Standard Pack,,3650,50,,,,23-09-2024,21-08-2026,AVAILABLE,27-01-2026
+PRD0116,PH001,,CPAP Machine,CPAP Machine,,Medical Devices,,Sun Pharma,Standard Pack,,1305,9,,,,08-05-2025,29-06-2026,AVAILABLE,27-01-2026
+PRD0117,PH001,,Syringes,Syringes,,Surgical & Consumables,,Cipla,Standard Pack,,1305,29,,,,19-08-2024,22-10-2026,AVAILABLE,27-01-2026
+PRD0118,PH001,,IV Cannula,IV Cannula,,Surgical & Consumables,,Abbott,Standard Pack,,9024,48,,,,01-03-2024,29-06-2026,AVAILABLE,27-01-2026
+PRD0119,PH001,,Cotton Roll,Cotton Roll,,Surgical & Consumables,,Cipla,Standard Pack,,8694,46,,,,14-05-2025,04-12-2026,AVAILABLE,27-01-2026
+PRD0120,PH001,,Gauze Pads,Gauze Pads,,Surgical & Consumables,,Sun Pharma,Standard Pack,,1742,13,,,,06-09-2025,29-08-2026,AVAILABLE,27-01-2026
+PRD0121,PH001,,Bandage Roll,Bandage Roll,,Surgical & Consumables,,Cipla,Standard Pack,,9750,50,,,,29-07-2024,07-03-2026,EXPIRING_SOON,27-01-2026
+PRD0122,PH001,,Surgical Gloves,Surgical Gloves,,Surgical & Consumables,,Cipla,Standard Pack,,2976,32,,,,20-06-2025,22-03-2026,EXPIRING_SOON,27-01-2026
+PRD0123,PH001,,Face Mask,Face Mask,,Surgical & Consumables,,Abbott,Standard Pack,,1541,23,,,,18-03-2024,03-06-2025,EXPIRED,27-01-2026
+PRD0124,PH001,,Scalpel Blade,Scalpel Blade,,Surgical & Consumables,,Abbott,Standard Pack,,8878,46,,,,19-03-2025,09-03-2027,AVAILABLE,27-01-2026
+PRD0125,PH001,,Suture Material,Suture Material,,Surgical & Consumables,,Cipla,Standard Pack,,2047,23,,,,04-08-2024,17-09-2026,AVAILABLE,27-01-2026
+PRD0126,PH001,,Disposable Apron,Disposable Apron,,Surgical & Consumables,,Mankind,Standard Pack,,8832,48,,,,04-03-2025,24-10-2026,AVAILABLE,27-01-2026
+PRD0127,PH001,,Urine Bag,Urine Bag,,Surgical & Consumables,,Sun Pharma,Standard Pack,,5712,34,,,,04-04-2024,01-01-2025,EXPIRED,27-01-2026
+PRD0128,PH001,,Catheter,Catheter,,Surgical & Consumables,,Mankind,Standard Pack,,2491,47,,,,24-05-2025,20-08-2027,AVAILABLE,27-01-2026
+PRD0129,PH001,,Surgical Drapes,Surgical Drapes,,Surgical & Consumables,,Sun Pharma,Standard Pack,,429,11,,,,09-07-2025,30-06-2027,AVAILABLE,27-01-2026
+PRD0130,PH001,,Sterile Pads,Sterile Pads,,Surgical & Consumables,,Sun Pharma,Standard Pack,,3916,22,,,,16-12-2024,07-10-2025,EXPIRED,27-01-2026
+PRD0131,PH001,,Wound Dressing,Wound Dressing,,Surgical & Consumables,,Dr Reddyâ€™s,Standard Pack,,2176,17,,,,10-02-2025,24-08-2026,AVAILABLE,27-01-2026
+PRD0132,PH001,DETT-1226,Dettol Original Instant Hand Sanitizer 50ml,"Alcohol Denat,Water,Propylene Glycol,Tetrahydroxypropyl Ethylenediamine,Fragrance,Limonene","An alcohol-based sanitizer that kills germs without water, keeps hands clean, soft, and non-sticky, and helps prevent germ spread. Ideal for quick hygiene on the go.",Personal Care & Wellness,No,Reckitt Benckiser (India) Pvt. Ltd.,1 bottle of 50 ml Sanitizer,,34,34,5,1,NA,25-04-2024,09-12-2026,AVAILABLE,27-01-2026
+PRD0133,PH001,HIMA-0227,Himalaya Herbals Purifying Neem Face Wash | For Acne & Pimple Relief | Paraben and Soap Free Face Care Product 100ml,"Water (Aqua), Ammonium Lauryl Sulfate, Melia Azadirachta (Neem) Leaf Extract, Cocamidopropyl Betaine, Sodium Cocoyl Glutamate, Disodium Cocoyl Glutamate, Glycerin, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Curcuma Longa (Turmeric) Root Extract, Sodium Hydroxide, Phenoxyethanol, Fragrance, Methylchloroisothiazolinone, Methylisothiazolinone, Sodium Metabisulfite, Citric Acid, Disodium EDTA, Tocopheryl Acetate, FD&C Yellow No. 5, FD&C Blue No. 1","Encompasses antibacterial and anti-inflammatory properties,Provides relief in the case of acne, boils, and ulcers, Assists in improving general skin health and immunity",Personal Care & Wellness,No,Himalaya Wellness Company,1 tube of 50 ml Face Wash,,87,87,4,1,NA,15-03-2025,26-02-2027,AVAILABLE,27-01-2026
+PRD0134,PH001,NIVE-1226,Nivea Body Milk Nourishing Lotion 120ml,"Aqua, Paraffinum Liquidum, C15-19 Alkane, Alcohol Denat. (3.66%), Glycerin, Cetearyl Alcohol, Glyceryl Stearate Citrate, Dimethicone, Phenoxyethanol, Glyceryl Glucoside, Methylparaben, Carbomer, Prunus Amygdalus Dulcis Oil, Sodium Hydroxide, Maris Sal, Linalool, Citronellol, Alpha-Isomethyl Ionone, Butylphenyl Methylpropional, Limonene, Benzyl Alcohol, Benzyl Salicylate, Perfume","Provides long-lasting softness and protection. It refreshes skin as its non-greasy formula quickly melts into your skin, skin compatibility dermatologically approved.",Personal Care & Wellness,No,Nivea India Pvt Ltd,1 bottle of 120 ml Lotion,,113,113,5,1,NA,11-08-2025,14-12-2026,AVAILABLE,27-01-2026
+PRD0135,PH001,HEAD-0126,Head & Shoulders Smooth & Silky Anti-Dandruff Shampoo | For Hair Care,"Water, Sodium Lauryl Sulfate, Sodium Laureth Sulfate, Glycol Distearate, Zinc Carbonate, Sodium Chloride, Sodium Xylenesulfonate, Cocamidopropyl Betaine, Dimethicone, Fragrance, Sodium Benzoate, Guar Hydroxypropyltrimonium Chloride, Magnesium Carbonate Hydroxide, Methylchloroisothiazolinone, Methylisothiazolinone, Blue 1, Yellow 5.","Head & Shoulders Anti-Dandruff Shampoo | For Hair Care is specially formulated to help manage dandruff and prevent it from reoccurring. It leaves the hair feeling and smelling fresh. Cooling menthol and our dandruff-managing ingredients leave your hair clean and dandruff-free, with a fresh scent that lasts. Gentle formula suitable for everyday use. This shampoo provides effective hair care.",Personal Care & Wellness,No,Procter & Gamble Hygiene and Health Care Ltd,1 bottle of 180 ml Shampoo,,184,184,2,1,NA,03-04-2025,20-01-2026,AVAILABLE,27-01-2026
+PRD0136,PH001,,Parachute 100% Pure Coconut | Hair Care Oil,Coconut Oil,"A pure, single-ingredient coconut oil that nourishes the scalp and hair, helps retain moisture, and improves hair softness, strength, and shine. It is 5-stage purified and quality-tested for safe daily use.",Personal Care & Wellness,No,Marico Limited,1 bottle of 300 ml Oil,,200,17,6,1,NA,20-10-2024,10-02-2027,AVAILABLE,27-01-2026
+PRD0137,PH001,,Colgate Toothpase,Toothpaste,,Personal Care & Wellness,No,Sun Pharma,Standard Pack,,874,19,1,1,NA,04-04-2025,06-10-2026,AVAILABLE,27-01-2026
+PRD0138,PH001,,Listerine,Mouthwash,,Personal Care & Wellness,No,Abbott,Standard Pack,,689,13,5,1,NA,01-12-2024,31-12-2025,EXPIRED,27-01-2026
+PRD0139,PH001,,Baby Lotion,Baby Lotion,,Personal Care & Wellness,No,Mankind,Standard Pack,,7320,40,1,1,NA,18-12-2024,05-12-2026,AVAILABLE,27-01-2026
+PRD0140,PH001,,Diapers,Diapers,,Personal Care & Wellness,No,Cipla,Standard Pack,,2304,32,9,1,NA,25-04-2025,01-11-2026,AVAILABLE,27-01-2026
+PRD0141,PH001,,Wet Wipes,Wet Wipes,,Personal Care & Wellness,No,Sun Pharma,Standard Pack,,3036,44,5,1,NA,09-10-2025,05-04-2027,AVAILABLE,27-01-2026
+PRD0142,PH001,,Sunscreen,Sunscreen,,Personal Care & Wellness,No,Mankind,Standard Pack,,6816,48,6,1,NA,02-05-2024,31-10-2024,AVAILABLE,27-01-2026
+PRD0143,PH001,,Park Avenue,Deodorant,,Personal Care & Wellness,No,Mankind,Standard Pack,,5200,50,8,1,NA,20-11-2024,18-11-2025,AVAILABLE,27-01-2026
+PRD0144,PH001,,Face Cream,Face Cream,,Personal Care & Wellness,No,Sun Pharma,Standard Pack,,5203,43,2,1,NA,30-08-2025,13-11-2027,AVAILABLE,27-01-2026
+PRD0145,PH001,,Lip Balm,Lip Balm,,Personal Care & Wellness,No,Cipla,Standard Pack,,3700,20,9,1,NA,02-04-2025,14-12-2025,AVAILABLE,27-01-2026
+PRD0146,PH001,,Dove Soap,Body Soap,,Personal Care & Wellness,No,Abbott,Standard Pack,,3145,17,3,1,NA,23-08-2024,18-11-2025,AVAILABLE,27-01-2026
+PRD0147,PH001,,Dettol Soap,,,Personal Care & Wellness,No,,,,,,8,1,NA,23-09-2024,22-09-2026,AVAILABLE,27-01-2026
+PRD0148,PH001,,Dove Shampoo,,,Personal Care & Wellness,No,,,,,,3,1,NA,23-10-2024,22-10-2026,AVAILABLE,27-01-2026
+PRD0149,PH001,,Dabur Red Toothpaste,,,Personal Care & Wellness,No,,,,,,7,1,NA,24-11-2024,23-11-2026,AVAILABLE,27-01-2026
+PRD0150,PH001,,Lux Soap,,,Personal Care & Wellness,No,,,,,,3,1,NA,03-12-2024,02-12-2026,OUT_OF_STOCK,27-01-2026
+PRD0151,PH001,,Santoor Soap,,,Personal Care & Wellness,No,,,,,,4,1,NA,02-01-2025,01-01-2027,AVAILABLE,27-01-2026
+PRD0152,PH001,,Lifeboy Soap,,,Personal Care & Wellness,No,,,,,,2,1,NA,12-02-2025,11-02-2027,AVAILABLE,27-01-2026
+PRD0153,PH001,,Meera Shampoo,,,Personal Care & Wellness,No,,,,,,7,1,NA,30-03-2025,29-03-2027,AVAILABLE,27-01-2026
+PRD0154,PH001,,Citadel Body Lotion,,,Personal Care & Wellness,No,,,,,,3,1,NA,25-04-2025,24-04-2027,AVAILABLE,27-01-2026
+PRD0155,PH001,,Cadbury Dairy Milk ,Chocolate Bar,,FMCG,No,,,,,,5,1,NA,09-05-2025,08-05-2027,AVAILABLE,27-01-2026
+PRD0156,PH001,,Munch Choclate,Chocolate Wafer,,FMCG,No,,,,,,3,1,NA,23-06-2025,22-06-2027,AVAILABLE,27-01-2026
+PRD0157,PH001,,Oreo Biscuit,Biscuit,,FMCG,No,,,,,,4,1,NA,18-07-2025,17-07-2027,AVAILABLE,27-01-2026
+PRD0158,PH001,,Good Day Biscuit,Biscuit,,FMCG,No,,,,,,3,1,NA,01-08-2025,31-07-2027,AVAILABLE,27-01-2026
+PRD0159,PH001,,Horlicks,"Malted barley (extracted solids) 66.7%, Wheat flour, Milk solids (14%), Wheat gluten, Vitamins A, B1, B2, B6, B12, C, E, D, Iron, Calcium, Magnesium, Phosphorus, Potassium, Niacin, Biotin, Folic acid, Pantothenic acid, Selenium, Copper, Zinc, Protein isolate, Iodised salt, Sugar, Soy protein isolate, Acidity regulator",,FMCG,No,,,,,,2,1,NA,27-09-2025,26-09-2027,OUT_OF_STOCK,27-01-2026
+PRD0160,PH001,,Bournvita,,,FMCG,No,,,,,,2,1,NA,11-10-2025,10-10-2027,AVAILABLE,27-01-2026
