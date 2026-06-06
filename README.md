@@ -1,324 +1,344 @@
-# Medical Supply Chain Management System
+# MSCMS - Medical Supply Chain Management System
 
-A comprehensive web-based medical supply chain management platform that connects pharmacies, distributors, and customers to optimize medicine procurement, inventory management, and distribution processes.
+MSCMS is a multi-role medical supply chain platform built to digitize the flow of medicines between customers, pharmacies, distributors, administrators, and delivery drivers. The system combines web portals, backend microservices, a driver mobile app, order tracking, and an AI-assisted procurement engine to demonstrate how modern healthcare supply operations can become more visible, predictable, and responsive.
 
-## 🏥 Project Overview
+The project is designed as a final-year scale prototype with a strong real-world orientation: customers can search and order medicines, pharmacies can manage stock and sales, distributors can process supply operations, administrators can supervise the ecosystem, drivers can manage deliveries, and AI modules can support forecasting and replenishment decisions.
 
-This system provides role-based access for four types of users:
+## What The System Delivers
 
-- **Customers**: Search medicines, check availability, place orders, and track deliveries
-- **Pharmacies**: Manage inventory, view statistics, handle procurement, and participate in Inter-Clinic Network (ICN)
-- **distributors**: Process orders, upload invoices, manage catalog, and handle shipments
-- **Administrators**: Monitor system operations, track orders, manage users, and resolve errors
+- Customer medicine discovery, cart, checkout, billing, and order tracking
+- Pharmacy inventory management, online order handling, offline walk-in sales, procurement, ICN-style exchange workflows, and live delivery visibility
+- Distributor product, invoice, shipment, vehicle, and driver management interfaces
+- Admin dashboards for user registration, pharmacy oversight, vendors, vehicles, and operational monitoring
+- Dedicated React Native driver app for delivery assignment, status updates, profile management, and mobile logistics workflows
+- AI demand forecasting and procurement decision support using FastAPI services
+- Budget-aware AI procurement planning with priority scoring, stockout urgency, distributor evaluation, and multi-cycle order allocation
+- MongoDB-backed services for users, inventory, orders, and distributor data
+- Redis-backed reservation patterns for stock availability and order processing
+- Standalone tracking UI for delivery and order status visualization
 
-## 🚀 Key Features
+## Core Modules
 
-### Core Features
-- Multi-role authentication with secure JWT-based sessions
-- Real-time inventory management with stock alerts
-- AI-powered demand forecasting for automatic reordering
-- AI invoice processing for distributor stock updates
-- Real-time order and shipment tracking
-- Inter-Clinic Network for pharmacy-to-pharmacy medicine exchange
+| Area | Implementation |
+| --- | --- |
+| Customer Portal | React + TypeScript portal for medicine search, cart, checkout, profile, pharmacies near the user, and order tracking |
+| Pharmacy Portal | React + TypeScript dashboard for inventory, orders, procurement, offline sales, ICN, distributor search, and live driver map views |
+| Distributor Portal | React + TypeScript portal for distributor products, orders, invoices, shipments, vehicles, and drivers |
+| Admin Portal | React + TypeScript portal for platform overview, pharmacy management, vendors, vehicles, settings, and registration |
+| Driver App | Expo React Native mobile app with driver login, active deliveries, detail screens, status transitions, and profile |
+| Backend Services | Node.js, Express, TypeScript services for users, inventory, orders, distributor operations, and a GraphQL gateway scaffold |
+| AI Engine | FastAPI services for forecasting, inventory intelligence, procurement recommendations, and order/procurement traces |
+| Tracking App | Standalone Vite tracking experience for order and delivery timeline visualization |
+| Infrastructure | Docker Compose setup for MongoDB, Redis, RabbitMQ, gateway, services, and web portals |
 
-### Technology Stack
+## AI Demand Forecasting And Procurement Intelligence
 
-**Frontend:**
-- React.js with TypeScript
-- Tailwind CSS for styling
-- Shadcn-ui component library
-- Vite for build tooling
-- Redux Toolkit for state management
-- React Query for API caching
-- Recharts for data visualization
+The AI engine lives primarily under:
 
-**Backend:**
-- Node.js with Express.js
-- GraphQL API Gateway
-- Microservices architecture
-- MongoDB distributed databases
-- Redis for caching
-- RabbitMQ for message queuing
-- JWT authentication
-
-**AI Services:**
-- Python with FastAPI
-- TensorFlow/PyTorch for ML models
-- OCR for invoice processing
-- Time series forecasting
-
-**Infrastructure:**
-- Docker & Docker Compose
-- Kubernetes (production)
-- Nginx reverse proxy
-- Prometheus & Grafana monitoring
-
-## 📁 Project Structure
-
-```
-medical-supply-chain/
-├── frontend/
-│   ├── customer-portal/       # Customer-facing website
-│   ├── pharmacy-portal/       # Pharmacy management dashboard
-│   ├── distributor-portal/         # distributor order management
-│   ├── admin-portal/          # Admin control panel
-│   └── shared/                # Shared components and utilities
-├── backend/
-│   ├── api-gateway/           # GraphQL API Gateway
-│   ├── services/              # Microservices
-│   │   ├── user-service/
-│   │   ├── inventory-service/
-│   │   ├── order-service/
-│   │   ├── distributor-service/
-│   │   ├── notification-service/
-│   │   ├── tracking-service/
-│   │   ├── icn-service/
-│   │   └── payment-service/
-│   └── shared/                # Shared backend utilities
-├── ai-services/
-│   ├── demand-forecasting/    # AI demand prediction
-│   ├── invoice-processing/    # AI invoice OCR
-│   └── analytics-engine/      # Business analytics
-├── infrastructure/
-│   ├── docker/
-│   ├── kubernetes/
-│   └── monitoring/
-├── tests/
-└── docs/
+```text
+ai-engine-medical-supply-engine - Copy/
 ```
 
-## 🛠️ Installation & Setup
+It exposes a FastAPI backend with forecast, inventory, procurement, and order routes:
+
+```text
+GET  /forecast
+GET  /inventory
+GET  /procurement
+GET  /procurement/data
+POST /procurement/config
+GET  /procurement/trace/{medicine_id}
+```
+
+The procurement layer is one of the most advanced parts of the repository. It models medicine replenishment as an operational decision problem, not just a low-stock alert. It evaluates:
+
+- current stock and safety stock
+- forecast quantity and average demand
+- reorder point and order quantity
+- days to stockout and safe ordering deadline
+- distributor availability, price, lead time, and rating
+- medicine priority using shortage, demand, and lead-time weights
+- monthly pharmacy budget split across configurable order cycles
+- critical items first, then budget-optimized selection using a knapsack-style allocation pass
+
+This creates an AI-assisted purchasing workflow where the system can recommend what to order, when to order it, how urgent it is, which distributor should fulfill it, and how the recommendation fits into the pharmacy's monthly procurement budget.
+
+## Driver And Delivery Workflow
+
+The repository includes a dedicated delivery subsystem in:
+
+```text
+driver-app/
+```
+
+The mobile app is built with Expo and React Native. It supports:
+
+- secure driver login
+- home dashboard with active and completed deliveries
+- delivery list with active, completed, and all tabs
+- delivery detail pages with customer, pharmacy, vehicle, and status information
+- status progression from assigned to picked up, in transit, delivered, or failed
+- profile and password management
+- mobile-friendly API integration for physical-device testing over LAN
+
+The driver backend exposes endpoints for authentication, driver profile retrieval, delivery listing, delivery details, and delivery status updates.
+
+## System Architecture
+
+```text
+MSCMS/
+|-- frontend/
+|   |-- customer-portal/
+|   |-- pharmacy-portal/
+|   |-- distributor-portal/
+|   |-- admin-portal/
+|   `-- shared/
+|-- backend/
+|   |-- api-gateway/
+|   |-- services/
+|   |   |-- user-service/
+|   |   |-- inventory-service/
+|   |   |-- order-service/
+|   |   |-- distributor-service/
+|   |   `-- distributor_order-service/
+|   `-- database/init/
+|-- ai-services/
+|   |-- demand-forecasting/
+|   |-- invoice-processing/
+|   `-- analytics-engine/
+|-- ai-engine-medical-supply-engine - Copy/
+|   |-- backend/
+|   `-- frontend/
+|-- driver-app/
+|   |-- src/
+|   `-- backend/
+|-- tracking/
+|-- infrastructure/
+`-- scripts/
+```
+
+## Microservices Architecture
+
+MSCMS follows a modular microservices-style architecture where each major business capability is separated into its own service or application. This keeps the system easier to maintain, easier to scale, and easier to extend as new healthcare supply-chain workflows are added.
+
+The backend is organized around domain-specific services:
+
+| Service | Responsibility |
+| --- | --- |
+| API Gateway | Central GraphQL/API entry scaffold for routing platform requests and exposing unified contracts |
+| User Service | Authentication, role-based login, user profiles, pharmacy registration, distributor registration, and admin access |
+| Inventory Service | Pharmacy medicine inventory, stock levels, availability, prescription upload support, and stock statistics |
+| Order Service | Customer-to-pharmacy orders, pharmacy order status transitions, stock reservation logic, and offline pharmacy sales |
+| Distributor Service | Distributor-side catalog, invoice, and supply operation foundations |
+| Distributor Order Service | Distributor order lifecycle support for pharmacy-to-distributor procurement flows |
+| AI Engine | Forecasting, inventory intelligence, procurement recommendation, and traceable decision support |
+| Driver Backend | Driver authentication, delivery assignment listing, delivery detail retrieval, and delivery status updates |
+
+The frontend layer is also split by role. Customers, pharmacies, distributors, and administrators each have a separate portal, allowing every user group to get a focused workflow instead of a single overloaded interface. The driver experience is separated further into a mobile app because delivery staff need a field-ready interface rather than a desktop dashboard.
+
+MongoDB is used as the primary persistence layer for operational data, Redis supports fast reservation and availability checks, and RabbitMQ is included for asynchronous service communication patterns. Docker Compose ties the platform together for local orchestration, making the project closer to a deployable distributed system than a single monolithic application.
+
+## User Roles
+
+### Customers
+
+Customers can register, search medicine availability, compare nearby pharmacy options, manage a cart, place orders, view bills, update profile information, and track order status.
+
+### Pharmacies
+
+Pharmacies can manage inventory, monitor stock activity, process customer orders, handle offline purchases, search distributor inventory, run procurement workflows, view delivery progress, and manage pharmacy-specific settings.
+
+### Distributors
+
+Distributors can manage products, orders, invoices, shipments, vehicles, and drivers. The portal is structured for supply dispatch operations and future integration with automated procurement orders.
+
+### Administrators
+
+Administrators can supervise registrations, pharmacies, vendors, vehicles, order summaries, settings, and overall platform activity through a management dashboard.
+
+### Drivers
+
+Drivers use the mobile app to authenticate, view assigned deliveries, update delivery status, and manage their delivery profile.
+
+## Technologies Used
+
+| Category | Technologies |
+| --- | --- |
+| Frontend Framework | React, TypeScript, Vite |
+| Styling And UI | Tailwind CSS, shadcn-style components, Lucide React icons, responsive dashboard layouts |
+| Routing And State | React Router, Context API, custom hooks, local storage utilities |
+| Charts And Visualization | Recharts, tracking timelines, dashboard cards, operational status components |
+| Mobile Development | Expo, React Native, React Navigation, Expo Secure Store, Async Storage, Expo Location |
+| Backend Runtime | Node.js, Express.js, TypeScript |
+| API Layer | REST APIs, GraphQL gateway scaffold, service-specific route modules |
+| AI And Forecasting | Python, FastAPI, demand forecasting services, procurement decision logic, inventory policy calculations |
+| Procurement Optimization | Priority scoring, safety-stock analysis, distributor selection, budget allocation, knapsack-style optimization |
+| Database | MongoDB with separate service databases and collections |
+| Caching And Reservation | Redis for fast stock reservation and availability patterns |
+| Messaging | RabbitMQ for asynchronous messaging architecture support |
+| Authentication | JWT-based authentication, role-aware login flows, protected service routes |
+| File Uploads | Multer-based upload handling for prescriptions, invoices, and pharmacy assets |
+| DevOps And Runtime | Docker, Docker Compose, Nginx configuration, Prometheus monitoring assets |
+| Tooling | npm workspaces, TypeScript compiler, ts-node-dev, Vite dev servers, EAS build support for mobile |
+
+## Important Workflows
+
+### Customer Order Flow
+
+1. Customer searches for medicines and pharmacies.
+2. Customer adds medicines to cart and checks out.
+3. Order service creates customer-to-pharmacy order records.
+4. Pharmacy reviews and transitions order status.
+5. Stock reservations can be held temporarily while the order is active.
+6. Customer tracks progress through the portal or tracking experience.
+
+### Pharmacy Offline Sale Flow
+
+1. Pharmacist searches current inventory.
+2. Items are added to an offline purchase cart.
+3. Customer, doctor, tax, discount, and bill details are captured.
+4. Offline order is saved for pharmacy records.
+5. Completion records sale history for later reporting.
+
+### AI Procurement Flow
+
+1. Forecasting layer estimates medicine demand.
+2. Inventory policy calculates reorder needs.
+3. Procurement logic evaluates priority, urgency, and budget.
+4. Distributor candidates are compared by stock, price, lead time, and rating.
+5. AI generates selected and skipped recommendations with reasons.
+6. Pharmacy can review suggested orders and proceed with procurement actions.
+
+### Driver Delivery Flow
+
+1. Distributor or backend assigns delivery records.
+2. Driver logs into the mobile app.
+3. Driver views active deliveries and details.
+4. Driver updates status through the delivery lifecycle.
+5. Delivery state becomes visible to operations-facing views.
+
+## Getting Started
 
 ### Prerequisites
-- Node.js >= 18.0.0
-- npm >= 9.0.0
-- Docker & Docker Compose
-- MongoDB >= 7.0
-- Redis >= 7.0
-- Python >= 3.10 (for AI services)
 
-### Quick Start with Docker
+- Node.js 18 or later
+- npm 9 or later
+- Python 3.10 or later
+- Docker and Docker Compose
+- MongoDB and Redis, either local or via Docker
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd medical-supply-chain
-```
+### Install Root Dependencies
 
-2. Copy environment variables:
-```bash
-cp .env.example .env
-# Edit .env with your configuration
-```
-
-3. Start all services with Docker Compose:
-```bash
-docker-compose up -d
-```
-
-4. Access the portals:
-- Customer Portal: http://localhost:3000
-- Pharmacy Portal: http://localhost:3001
-- distributor Portal: http://localhost:3002
-- Admin Portal: http://localhost:3003
-- API Gateway: http://localhost:4000/graphql
-
-### Local Development Setup
-
-1. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Install frontend dependencies:
-```bash
-cd frontend/customer-portal && npm install
-cd ../pharmacy-portal && npm install
-cd ../distributor-portal && npm install
-cd ../admin-portal && npm install
-cd ../shared && npm install
-```
+### Run Web Portals And Gateway
 
-3. Install backend dependencies:
-```bash
-cd backend/api-gateway && npm install
-cd ../services/user-service && npm install
-# Repeat for other services
-```
-
-4. Start MongoDB, Redis, and RabbitMQ:
-```bash
-docker-compose up -d mongodb redis rabbitmq
-```
-
-5. Run all services in development mode:
 ```bash
 npm run dev
 ```
 
-Or run individual services:
+This starts the configured customer, pharmacy, distributor, admin, and gateway development commands from the root workspace.
+
+Individual portals can also be started separately:
+
 ```bash
-npm run dev:customer    # Customer portal
-npm run dev:pharmacy    # Pharmacy portal
-npm run dev:distributor      # distributor portal
-npm run dev:admin       # Admin portal
-npm run dev:gateway     # API Gateway
+npm run dev:customer
+npm run dev:pharmacy
+npm run dev:distributor
+npm run dev:admin
+npm run dev:gateway
 ```
 
-## 🧪 Testing
+### Run With Docker Compose
 
-Run all tests:
 ```bash
-npm test
+docker-compose up -d
 ```
 
-Run frontend tests:
+Docker Compose includes MongoDB, Redis, RabbitMQ, the API gateway, backend services, and web portal containers.
+
+### Run The AI Medical Supply Engine
+
 ```bash
-npm run test:frontend
+cd "ai-engine-medical-supply-engine - Copy/backend"
+pip install -r requirements.txt
+uvicorn app.main:app --reload
 ```
 
-Run backend tests:
+The FastAPI service exposes forecasting and procurement routes from the `app.main` entry point.
+
+### Run The Driver App
+
 ```bash
-npm run test:backend
+cd driver-app
+npm install
+npm start
 ```
 
-## 📝 API Documentation
+For a physical phone, update the API base URL in:
 
-GraphQL Playground is available at: http://localhost:4000/graphql
+```text
+driver-app/src/api/api.ts
+```
 
-API documentation can be found in the `/docs/api` directory.
+Use the machine's LAN IP so the Expo app can reach the local backend.
 
-## 🎨 UI/UX Design
+### Run The Driver Backend
 
-### Color Scheme
-- **Primary**: Dark Navy Blue (#0A1D37) - Professional and trustworthy
-- **Accent**: Light Blue (#4BA3C3) - Modern and approachable
-- **Success**: Medical Green (#3BB273) - Health and reliability
-- **Background**: Soft White (#F9FAFB) - Clean and minimal
-- **Text**: Grey Neutral (#6B7280)
-- **Error**: Alert Red (#E63946)
+```bash
+cd driver-app/backend
+npm install
+npm run dev
+```
 
-### Design Principles
-- Mobile-first responsive design
-- Accessibility compliant (WCAG 2.1 AA)
-- Intuitive navigation (max 3-level depth)
-- Real-time updates and notifications
-- Clear visual hierarchy
+The driver backend runs on port `5203` by default.
 
-## 🔒 Security
+### Run The Tracking App
 
-- JWT-based authentication with refresh tokens
-- Role-based access control (RBAC)
-- Input validation and sanitization
-- Rate limiting on API endpoints
-- Encrypted data transmission (HTTPS)
-- Password hashing with bcrypt
-- PII data encryption
-- Comprehensive audit logging
-- GDPR compliant
+```bash
+cd tracking
+npm install
+npm run dev
+```
 
-## 📊 Database Schema
-
-The system uses MongoDB with distributed databases:
-- **user_db**: User accounts and authentication
-- **inventory_db**: Medicines, stock, and batches
-- **order_db**: Orders and order items
-- **distributor_db**: distributor catalogs and information
-- **tracking_db**: Shipments and tracking data
-- **analytics_db**: Analytics and forecasting data
-
-See `/docs/design/database-schema.md` for detailed schema documentation.
-
-## 🚀 Deployment
-
-### Production Build
+## Build Commands
 
 ```bash
 npm run build
+npm run build:frontend
+npm run build:backend
 ```
 
-### Docker Production Build
+Portal-specific builds are also available:
 
 ```bash
-docker-compose -f docker-compose.prod.yml build
-docker-compose -f docker-compose.prod.yml up -d
+npm run build:customer
+npm run build:pharmacy
+npm run build:distributor
+npm run build:admin
 ```
 
-### Kubernetes Deployment
+## Current Implementation Status
 
-```bash
-kubectl apply -f infrastructure/kubernetes/
-```
+MSCMS is best understood as a comprehensive, modular academic prototype. Several workflows are implemented with real UI and backend logic, especially authentication, inventory foundations, order handling, offline pharmacy sales, admin views, the driver mobile subsystem, and the AI procurement engine. Some advanced areas, such as full distributor automation, complete ICN backend integration, and production-grade real-time logistics, remain natural extension points.
 
-## 📈 Monitoring
+This balance is intentional for a large final-year project: the repository demonstrates a full healthcare supply-chain ecosystem, while still leaving clear engineering paths for hardening contracts, aligning ports and schemas, strengthening security, and connecting all AI recommendations directly to live operational data.
 
-- **Prometheus**: Metrics collection
-- **Grafana**: Visualization dashboards
-- **ELK Stack**: Centralized logging
-- **Sentry**: Error tracking
-- **New Relic**: APM monitoring
+## Future Enhancements
 
-Access Grafana dashboard: http://localhost:3004 (when using Docker)
+- Connect forecasting directly to completed order history and pharmacy sales records
+- Standardize inventory and order schemas across all services and portals
+- Add WebSocket-based live notifications for customers, pharmacies, distributors, and drivers
+- Fully integrate AI procurement suggestions with distributor purchase-order creation
+- Expand invoice processing with production OCR and validation
+- Add route optimization and GPS-based delivery tracking for drivers
+- Strengthen authentication, password policies, audit logging, and deployment security
+- Add automated integration tests for cross-service workflows
 
-## 🤝 Contributing
+## Project Vision
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+MSCMS is built around a simple but important idea: medicine supply should not be invisible, reactive, or fragmented. By connecting inventory, demand, procurement, ordering, delivery, and administration in one modular platform, the system shows how pharmacies and distributors can move toward smarter, data-driven healthcare logistics.
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👥 Team
-
-- Backend Development Team
-- Frontend Development Team
-- AI/ML Team
-- DevOps Team
-- QA Team
-
-## 📞 Support
-
-For support, email support@medicalsupplychain.com or join our Slack channel.
-
-## 🗺️ Roadmap
-
-### Phase 1: Core Platform (Months 1-3) ✅
-- User authentication and role management
-- Basic pharmacy and distributor portals
-- Core inventory management features
-- Customer medicine search and ordering
-
-### Phase 2: Advanced Features (Months 4-6)
-- AI integration for demand forecasting
-- Advanced tracking and logistics
-- Inter-Clinic Network implementation
-- Admin control panel enhancements
-
-### Phase 3: Optimization & Scale (Months 7-9)
-- Performance optimization
-- Advanced analytics and reporting
-- Mobile application development
-- Third-party integrations
-
-### Phase 4: Enhancement (Months 10-12)
-- Kiosk integration
-- Advanced AI features
-- Additional compliance features
-- System optimization and scaling
-
-## 🎯 Success Metrics
-
-- User Adoption: 80% of target pharmacies onboarded within 6 months
-- Order Processing: 50% reduction in processing time
-- Inventory Accuracy: 95% accuracy across all pharmacies
-- Customer Satisfaction: 4.5+ star rating
-- System Uptime: 99.9% availability
-- Cost Reduction: 30% operational cost reduction
-
----
-
-Made with ❤️ for better healthcare supply chain management
+The result is not just a set of screens. It is a working blueprint for an intelligent medical supply chain platform that can grow from a strong prototype into a practical healthcare operations product.
