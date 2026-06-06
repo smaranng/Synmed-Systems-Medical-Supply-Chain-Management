@@ -1,8 +1,27 @@
-# MSCMS - Medical Supply Chain Management System
+# SYNMED Systems - Medical Supply Chain Management System
 
-MSCMS is a multi-role medical supply chain platform built to digitize the flow of medicines between customers, pharmacies, distributors, administrators, and delivery drivers. The system combines web portals, backend microservices, a driver mobile app, order tracking, and an AI-assisted procurement engine to demonstrate how modern healthcare supply operations can become more visible, predictable, and responsive.
+SYNMED Systems is a multi-role medical supply chain platform built to digitize the flow of medicines between customers, pharmacies, distributors, administrators, and delivery drivers. The system combines web portals, backend microservices, a driver mobile app, order tracking, and an AI-assisted procurement engine to demonstrate how modern healthcare supply operations can become more visible, predictable, and responsive.
 
 The project is designed as a final-year scale prototype with a strong real-world orientation: customers can search and order medicines, pharmacies can manage stock and sales, distributors can process supply operations, administrators can supervise the ecosystem, drivers can manage deliveries, and AI modules can support forecasting and replenishment decisions.
+
+## Navigation
+
+| Section | Description |
+| --- | --- |
+| [What The System Delivers](#what-the-system-delivers) | High-level capabilities and platform value |
+| [Core Modules](#core-modules) | Main portals, services, apps, and infrastructure pieces |
+| [AI Demand Forecasting And Procurement Intelligence](#ai-demand-forecasting-and-procurement-intelligence) | Forecasting, reorder planning, distributor selection, and procurement optimization |
+| [Driver And Delivery Workflow](#driver-and-delivery-workflow) | Mobile driver app and delivery lifecycle |
+| [System Architecture](#system-architecture) | Repository structure and major application layers |
+| [Microservices Architecture](#microservices-architecture) | Domain services and their responsibilities |
+| [User Roles](#user-roles) | Customer, pharmacy, distributor, admin, and driver responsibilities |
+| [Technologies Used](#technologies-used) | Frontend, backend, AI, database, DevOps, and tooling stack |
+| [Important Workflows](#important-workflows) | Customer ordering, offline sales, AI procurement, and driver delivery flows |
+| [Getting Started](#getting-started) | Local setup and run commands |
+| [Build Commands](#build-commands) | Production and portal-specific build commands |
+| [Current Implementation Status](#current-implementation-status) | Honest status of completed and extendable areas |
+| [Future Enhancements](#future-enhancements) | Planned improvements and next engineering steps |
+| [Project Vision](#project-vision) | Long-term purpose of SYNMED Systems |
 
 ## What The System Delivers
 
@@ -119,7 +138,7 @@ MSCMS/
 
 ## Microservices Architecture
 
-MSCMS follows a modular microservices-style architecture where each major business capability is separated into its own service or application. This keeps the system easier to maintain, easier to scale, and easier to extend as new healthcare supply-chain workflows are added.
+SYNMED Systems follows a modular microservices-style architecture where each major business capability is separated into its own service or application. This keeps the system easier to maintain, easier to scale, and easier to extend as new healthcare supply-chain workflows are added.
 
 The backend is organized around domain-specific services:
 
@@ -322,7 +341,7 @@ npm run build:admin
 
 ## Current Implementation Status
 
-MSCMS is best understood as a comprehensive, modular academic prototype. Several workflows are implemented with real UI and backend logic, especially authentication, inventory foundations, order handling, offline pharmacy sales, admin views, the driver mobile subsystem, and the AI procurement engine. Some advanced areas, such as full distributor automation, complete ICN backend integration, and production-grade real-time logistics, remain natural extension points.
+SYNMED Systems is best understood as a comprehensive, modular academic prototype. Several workflows are implemented with real UI and backend logic, especially authentication, inventory foundations, order handling, offline pharmacy sales, admin views, the driver mobile subsystem, and the AI procurement engine. Some advanced areas, such as full distributor automation, complete ICN backend integration, and production-grade real-time logistics, remain natural extension points.
 
 This balance is intentional for a large final-year project: the repository demonstrates a full healthcare supply-chain ecosystem, while still leaving clear engineering paths for hardening contracts, aligning ports and schemas, strengthening security, and connecting all AI recommendations directly to live operational data.
 
@@ -339,6 +358,6 @@ This balance is intentional for a large final-year project: the repository demon
 
 ## Project Vision
 
-MSCMS is built around a simple but important idea: medicine supply should not be invisible, reactive, or fragmented. By connecting inventory, demand, procurement, ordering, delivery, and administration in one modular platform, the system shows how pharmacies and distributors can move toward smarter, data-driven healthcare logistics.
+SYNMED Systems is built around a simple but important idea: medicine supply should not be invisible, reactive, or fragmented. By connecting inventory, demand, procurement, ordering, delivery, and administration in one modular platform, the system shows how pharmacies and distributors can move toward smarter, data-driven healthcare logistics.
 
 The result is not just a set of screens. It is a working blueprint for an intelligent medical supply chain platform that can grow from a strong prototype into a practical healthcare operations product.
