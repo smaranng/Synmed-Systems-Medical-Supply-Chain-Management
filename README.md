@@ -4,24 +4,22 @@ SYNMED Systems is a multi-role medical supply chain platform built to digitize t
 
 The project is designed as a final-year scale prototype with a strong real-world orientation: customers can search and order medicines, pharmacies can manage stock and sales, distributors can process supply operations, administrators can supervise the ecosystem, drivers can manage deliveries, and AI modules can support forecasting and replenishment decisions.
 
-## Navigation
+## Overview
 
-| Section | Description |
-| --- | --- |
-| [What The System Delivers](#what-the-system-delivers) | High-level capabilities and platform value |
-| [Core Modules](#core-modules) | Main portals, services, apps, and infrastructure pieces |
-| [AI Demand Forecasting And Procurement Intelligence](#ai-demand-forecasting-and-procurement-intelligence) | Forecasting, reorder planning, distributor selection, and procurement optimization |
-| [Driver And Delivery Workflow](#driver-and-delivery-workflow) | Mobile driver app and delivery lifecycle |
-| [System Architecture](#system-architecture) | Repository structure and major application layers |
-| [Microservices Architecture](#microservices-architecture) | Domain services and their responsibilities |
-| [User Roles](#user-roles) | Customer, pharmacy, distributor, admin, and driver responsibilities |
-| [Technologies Used](#technologies-used) | Frontend, backend, AI, database, DevOps, and tooling stack |
-| [Important Workflows](#important-workflows) | Customer ordering, offline sales, AI procurement, and driver delivery flows |
-| [Getting Started](#getting-started) | Local setup and run commands |
-| [Build Commands](#build-commands) | Production and portal-specific build commands |
-| [Current Implementation Status](#current-implementation-status) | Honest status of completed and extendable areas |
-| [Future Enhancements](#future-enhancements) | Planned improvements and next engineering steps |
-| [Project Vision](#project-vision) | Long-term purpose of SYNMED Systems |
+- [What The System Delivers](#what-the-system-delivers)
+- [Core Modules](#core-modules)
+- [AI Demand Forecasting And Procurement Intelligence](#ai-demand-forecasting-and-procurement-intelligence)
+- [Driver And Delivery Workflow](#driver-and-delivery-workflow)
+- [System Architecture](#system-architecture)
+- [Microservices Architecture](#microservices-architecture)
+- [User Roles](#user-roles)
+- [Technologies Used](#technologies-used)
+- [Important Workflows](#important-workflows)
+- [Getting Started](#getting-started)
+- [Build Commands](#build-commands)
+- [Current Implementation Status](#current-implementation-status)
+- [Future Enhancements](#future-enhancements)
+- [Project Vision](#project-vision)
 
 ## What The System Delivers
 
