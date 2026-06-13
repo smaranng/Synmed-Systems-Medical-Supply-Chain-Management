@@ -16,7 +16,7 @@ The project is designed as a final-year scale prototype with a strong real-world
 - [Technologies Used](#technologies-used)
 - [Important Workflows](#important-workflows)
 - [Getting Started](#getting-started)
-- [Build Commands](#build-commands)
+- [Application Build](#application-build)
 - [Current Implementation Status](#current-implementation-status)
 - [Future Enhancements](#future-enhancements)
 - [Project Vision](#project-vision)
@@ -244,53 +244,73 @@ Drivers use the mobile app to authenticate, view assigned deliveries, update del
 - Docker and Docker Compose
 - MongoDB and Redis, either local or via Docker
 
-### Install Root Dependencies
+### App Installation
 
 ```bash
-npm install
+npm install -g expo-cli
+npm install -g eas-cli
+npm install expo@^54.0.0
+npx expo install expo-secure-store
 ```
 
-### Run Web Portals And Gateway
+### Execution Rule
+
+Use `npm run dev` for frontend development servers and `npm start` for backend services and the driver app.
+
+Important: do not use `npm run build` for backend execution. Backend services should be started with `npm start`.
+
+### Frontend Portals
+
+Open each portal directory and run the frontend development command:
 
 ```bash
+cd Medical-Supply-Chain-Management/frontend/pharmacy-portal
+npm run dev
+
+cd Medical-Supply-Chain-Management/frontend/customer-portal
+npm run dev
+
+cd Medical-Supply-Chain-Management/frontend/admin-portal
+npm run dev
+
+cd Medical-Supply-Chain-Management/frontend/distributor-portal
 npm run dev
 ```
 
-This starts the configured customer, pharmacy, distributor, admin, and gateway development commands from the root workspace.
+### Backend Services
 
-Individual portals can also be started separately:
+Open each backend service directory and start it with `npm start`:
 
 ```bash
-npm run dev:customer
-npm run dev:pharmacy
-npm run dev:distributor
-npm run dev:admin
-npm run dev:gateway
+cd Medical-Supply-Chain-Management/backend/services/user-service
+npm start
+
+cd Medical-Supply-Chain-Management/backend/services/inventory-service
+npm start
+
+cd Medical-Supply-Chain-Management/backend/services/order-service
+npm start
+
+cd Medical-Supply-Chain-Management/backend/services/distributor-service
+npm start
+
+cd Medical-Supply-Chain-Management/backend/services/distributor_order-service
+npm start
 ```
 
-### Run With Docker Compose
+### Driver Backend And App
+
+Start the driver backend first:
 
 ```bash
-docker-compose up -d
+cd Medical-Supply-Chain-Management/driver-app/backend
+npm start
 ```
 
-Docker Compose includes MongoDB, Redis, RabbitMQ, the API gateway, backend services, and web portal containers.
-
-### Run The AI Medical Supply Engine
+Then start the driver mobile app:
 
 ```bash
-cd "ai-engine-medical-supply-engine - Copy/backend"
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-```
-
-The FastAPI service exposes forecasting and procurement routes from the `app.main` entry point.
-
-### Run The Driver App
-
-```bash
-cd driver-app
-npm install
+cd Medical-Supply-Chain-Management/driver-app
 npm start
 ```
 
@@ -302,39 +322,39 @@ driver-app/src/api/api.ts
 
 Use the machine's LAN IP so the Expo app can reach the local backend.
 
-### Run The Driver Backend
+### Redis Monitor
 
 ```bash
-cd driver-app/backend
-npm install
+docker exec -it redis-local redis-cli
+monitor
+```
+
+### AI Demand Forecasting
+
+```bash
+cd "Medical-Supply-Chain-Management/ai-engine-medical-supply-engine - Copy/backend"
+uvicorn app.main:app --reload
+
+cd "Medical-Supply-Chain-Management/ai-engine-medical-supply-engine - Copy/frontend"
 npm run dev
 ```
 
-The driver backend runs on port `5203` by default.
+The FastAPI service exposes forecasting and procurement routes from the `app.main` entry point.
 
-### Run The Tracking App
+### Optional Docker Compose
 
 ```bash
-cd tracking
-npm install
-npm run dev
+docker-compose up -d
 ```
 
-## Build Commands
+Docker Compose includes MongoDB, Redis, RabbitMQ, the API gateway, backend services, and web portal containers.
+
+## Application Build
+
+Build the Android driver app preview with EAS:
 
 ```bash
-npm run build
-npm run build:frontend
-npm run build:backend
-```
-
-Portal-specific builds are also available:
-
-```bash
-npm run build:customer
-npm run build:pharmacy
-npm run build:distributor
-npm run build:admin
+eas build -p android --profile preview
 ```
 
 ## Current Implementation Status
