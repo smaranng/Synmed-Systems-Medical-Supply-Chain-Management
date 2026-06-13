@@ -399,9 +399,8 @@ The distributor portal supports bulk supply operations, pharmacy order fulfillme
 
 The driver app is a mobile-first delivery interface for drivers assigned by distributors. The login screen provides controlled access for authorized drivers, and the dashboard shows active deliveries, completed delivery count, total assignments, current delivery status, pharmacy destination, distributor name, and approximate delivery distance.
 
-![Driver App Login](screenshots/driver_app_login.jpeg)
+![Driver App](screenshots/driver_app.jpeg)
 
-![Driver App Dashboard](screenshots/driver_app_dashboard.jpeg)
 
 
 ## Current Implementation Status
