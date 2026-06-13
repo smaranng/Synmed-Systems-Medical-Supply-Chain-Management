@@ -17,6 +17,7 @@ The project is designed as a final-year scale prototype with a strong real-world
 - [Important Workflows](#important-workflows)
 - [Getting Started](#getting-started)
 - [Application Build](#application-build)
+- [Application Screenshots](#application-screenshots)
 - [Current Implementation Status](#current-implementation-status)
 - [Future Enhancements](#future-enhancements)
 - [Project Vision](#project-vision)
@@ -257,7 +258,7 @@ npx expo install expo-secure-store
 
 Use `npm run dev` for frontend development servers and `npm start` for backend services and the driver app.
 
-Important: do not use `npm run build` for backend execution. Backend services should be started with `npm start`.
+Important: Do not use `npm run build` for backend execution. Backend services should be started with `npm start`.
 
 ### Frontend Portals
 
@@ -356,6 +357,52 @@ Build the Android driver app preview with EAS:
 ```bash
 eas build -p android --profile preview
 ```
+
+
+## Application Screenshots
+
+The screenshots below provide a minimal visual demonstration of the major SYNMED Systems modules. For privacy and security reasons, only selected landing pages and dashboard views are included instead of full operational screens, detailed records, credentials, customer information, or internal datasets.
+
+### 1. Customer Portal
+
+The customer portal is designed for medicine discovery, nearby pharmacy selection, cart management, pickup-based ordering, billing, and order tracking. The landing page introduces the walk-in and kiosk-friendly medicine pickup flow, while the dashboard gives customers a clear summary of active orders, cart items, favorites, and recent order history.
+
+![Customer Landing](screenshots/customer_landing.jpeg)
+
+![Customer Dashboard](screenshots/customer_dashboard.jpeg)
+
+### 2. Pharmacy Portal
+
+The pharmacy portal gives pharmacies a focused operations workspace for inventory monitoring, procurement, customer orders, offline purchases, distributor discovery, order tracking, and stock updates. The landing screen communicates the pharmacy-facing value proposition, while the dashboard highlights revenue, order trends, inventory count, low-stock alerts, and performance charts.
+
+![Pharmacy Landing](screenshots/pharma_landing.png)
+
+![Pharmacy Dashboard](screenshots/pharma_dashboard.png)
+
+### 3. AI Forecasting And Procurement
+
+The AI module demonstrates demand forecasting and budget-aware procurement intelligence for the pharmacy medicine portfolio. It summarizes forecasted demand, reorder flags, inventory status, and procurement candidates, then shows how medicines are prioritized by urgency, safe deadline, order cycle, quantity, and AI-assisted selection decisions.
+
+![AI Procurement Overview](screenshots/ai_procurement.jpeg)
+
+![AI Reorder List](screenshots/ai_reorder_list.jpeg)
+
+### 4. Distributor Portal
+
+The distributor portal supports bulk supply operations, pharmacy order fulfillment, shipment visibility, product management, and vehicle-driver coordination. The landing page presents distributor-side capabilities, while the dashboard summarizes order volume, active shipments, revenue, pending orders, recent orders, and shipment details.
+
+![Distributor Landing](screenshots/distributor_landing.jpeg)
+
+![Distributor Dashboard](screenshots/distributor_dashboard.png)
+
+### 5. Driver App
+
+The driver app is a mobile-first delivery interface for drivers assigned by distributors. The login screen provides controlled access for authorized drivers, and the dashboard shows active deliveries, completed delivery count, total assignments, current delivery status, pharmacy destination, distributor name, and approximate delivery distance.
+
+![Driver App Login](screenshots/driver_app_login.jpeg)
+
+![Driver App Dashboard](screenshots/driver_app_dashboard.jpeg)
+
 
 ## Current Implementation Status
 
