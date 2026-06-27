@@ -103,6 +103,8 @@ The driver backend exposes endpoints for authentication, driver profile retrieva
 
 ## System Architecture
 
+The structure below shows how the repository is organized into role-specific frontend portals, backend microservices, AI services, the driver mobile application, tracking modules, and supporting infrastructure.
+
 ```text
 MSCMS/
 |-- frontend/
@@ -155,6 +157,8 @@ The backend is organized around domain-specific services:
 The frontend layer is also split by role. Customers, pharmacies, distributors, and administrators each have a separate portal, allowing every user group to get a focused workflow instead of a single overloaded interface. The driver experience is separated further into a mobile app because delivery staff need a field-ready interface rather than a desktop dashboard.
 
 MongoDB is used as the primary persistence layer for operational data, Redis supports fast reservation and availability checks, and RabbitMQ is included for asynchronous service communication patterns. Docker Compose ties the platform together for local orchestration, making the project closer to a deployable distributed system than a single monolithic application.
+
+The diagram below gives a high-level overview of the SYNMED Systems microservices architecture, showing how the portals, backend services, AI engine, driver application, databases, cache, and messaging components work together.
 
 ![Architecture Diagram](screenshots/microservices_arch.jpeg)
 
