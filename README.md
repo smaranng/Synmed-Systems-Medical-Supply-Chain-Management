@@ -156,6 +156,8 @@ The frontend layer is also split by role. Customers, pharmacies, distributors, a
 
 MongoDB is used as the primary persistence layer for operational data, Redis supports fast reservation and availability checks, and RabbitMQ is included for asynchronous service communication patterns. Docker Compose ties the platform together for local orchestration, making the project closer to a deployable distributed system than a single monolithic application.
 
+![Architecture Diagram](screenshots/microservices_arch.jpeg)
+
 ## User Roles
 
 ### Customers
